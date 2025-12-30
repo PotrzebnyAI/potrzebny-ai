@@ -19,7 +19,6 @@
     "@supabase/ssr": "^0.5.2",
     "@stripe/stripe-js": "^4.10.0",
     "stripe": "^17.4.0",
-    "@sentry/nextjs": "^8.42.0",
     "next-auth": "^5.0.0-beta.25",
     "zod": "^3.24.1",
     "lucide-react": "^0.468.0",
