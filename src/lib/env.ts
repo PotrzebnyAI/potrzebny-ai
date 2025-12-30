@@ -32,8 +32,14 @@ export const env = createEnv({
     EXA_API_KEY: z.string().optional(),
     BRAVE_SEARCH_API_KEY: z.string().startsWith('BSA').optional(),
 
-    // Google
+    // Google Cloud
     GOOGLE_CLOUD_API_KEY: z.string().startsWith('AIza').optional(),
+
+    // Google Service Account (JSON key for Domain-Wide Delegation)
+    // Service Account: gmail-full-access-service-acco@potrzebny-ai-prod.iam.gserviceaccount.com
+    // Client ID: 116898976924675896210
+    // Scopes: Gmail, Drive, Calendar, Sheets, Docs, Admin
+    GOOGLE_SERVICE_ACCOUNT_KEY: z.string().optional(),
   },
 
   /**
@@ -67,6 +73,7 @@ export const env = createEnv({
     EXA_API_KEY: process.env.EXA_API_KEY,
     BRAVE_SEARCH_API_KEY: process.env.BRAVE_SEARCH_API_KEY,
     GOOGLE_CLOUD_API_KEY: process.env.GOOGLE_CLOUD_API_KEY,
+    GOOGLE_SERVICE_ACCOUNT_KEY: process.env.GOOGLE_SERVICE_ACCOUNT_KEY,
 
     // Client
     NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,

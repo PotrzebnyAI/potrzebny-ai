@@ -41,7 +41,8 @@
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.6.0",
     "sonner": "^1.7.1",
-    "date-fns": "^4.1.0"
+    "date-fns": "^4.1.0",
+    "googleapis": "^144.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
