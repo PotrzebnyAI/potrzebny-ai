@@ -20,9 +20,13 @@ const nextConfig: NextConfig = {
 export default withSentryConfig(nextConfig, {
   org: 'potrzebny-ai',
   project: 'production',
-  silent: !process.env.CI,
+  silent: true,
   widenClientFileUpload: true,
   hideSourceMaps: true,
   disableLogger: true,
   automaticVercelMonitors: true,
+  sourcemaps: {
+    disable: !process.env.SENTRY_AUTH_TOKEN,
+  },
+  telemetry: false,
 })
