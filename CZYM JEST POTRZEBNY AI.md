@@ -1,0 +1,653 @@
+NA PIERWSZYM miejscu są. VALIDIC TO W OGOLE SĄ PERELKI o maksmalnym wykorzystaniu , wszystkie health api dodaj do paneli z tym związanych supermózg, terapeutyczne, research dla lekarzy w domyślne psychiatrow, ale wszystkich innych jak najbardziej tez nigdzie nie ma noty, ze sie jakkolwiek ograniczamy albo że tylko dla psychiatrow chcialbym zebys przygotowal prompta dla perplexity max z premium sources do zrobienia researchu, doboru idealnych konfiguracji zmiennych/api, bo to kluczowe w kontekscie maksymalnej jakosci i oplacalnosci marży na poziomie choć 80-85%, zeby wybrac perfekcyjny dobor zmiennych/api, napisania tobie claude code20x kilkudziesięciu perfekcyjnych promtów z kodem do wdrożenia POTRZEBNY AI dziś 6 stycznia 2026 w claude code default full acess dla stworzenia absolutnie perfekcyjnego autodeployu i najlepszą, najpotężniejsza, wyjątkowa platforme MED/EDTECH W POLSCE BO TU WYPUSZCZAM PIERWSZĄ WERSJĘ ALE JAK NAJBARDZIEJ CHCIALBYM TERAZ ZROBIĆ NAJLEPSZY PRODUKT NA ŚWIECIE DOSTĘPNY PÓKI CO DLA POLAKÓW, GENIALNY, ZEBYS TY ZROBIL JEDEN RAZ PERFEKCYJNY AUTODEPLOY BEZPOSREDNIO STĄD JEDNOCZEŚNIE tzn w jednym ciągu, jednej rozmowie WEB \+ APP STORE \+ GOOGLE PLAY. Z CZEGO TELEBIM MOŻNA OPLACAĆ TYLKO W WEB, RESZTA NORMALNIE TAKŻE W PEŁNI DO OPLACENIA ZAROWNO W WEB JAK I APP STORE I GOOGLE PLAY UDA SIĘ DZIĘKI ZAAWANSOWANEJ BAZIE WSZELKICH ZMIENNYCH, ORAZ SZCZEGOLOWEJ STRUKTURZE I PLANOWI, WIZJI widze to tak dodatkowo planowana b2b 2bc dla szkol, nauczycieli, wszelkich orgazanizacji czy calej sieci psychomedic\!\!\!\!\! obecnie jestem vat 0 i na ryczlacie 12%, mam vat-ue dla platnosci odwroconych (researve charge) pozostajac vat0 do 240 tys przychodu rocznie moze to wprowadzic moj doktor szef kiliniki mega wazny chcialby zebym to stworzyl takze dla psychomedic\! widze to raczej jako specjalny panel dla nich b2b lub b2c warto miec na wzgledzie ze jestem vat 0 na ten moment, jestem JDG. to ma powstac raz i perfekcyjnie potem auto debugging, po deployu ma być tak że nie muszę się do tego dotykać minimum 2 miesiące a wszystko dziala idealnie, dopoki nie zrobie mega skalowania, zarobie w chuj siana i bede mogl zatrudnic pracownikow a samemu skupic sie na wizjonerstwie i robieniu ostatecznego show. wiem ze pierwszy start jest najtrudniejszy i nawazniejszy, kilkuset pierwszch subsybentów, potem to już marzenia się spelniaja. ale musismy to zrobic raz ostatecznie i perfekcyjnie, tak aby POTRZEBNY AI stal sie tak potrzebny ze ludzie nie beda wyobrazali sobie bez tego życia. Można użyć polskiego powiedzenia "nikt nie prosił, każdy potrzebował". produkt ma być najlepszy na świecie, doskonaly, rentowny, BANALNIE PROSTY W UŻYCIU I INTUICYJNY, KAŻDY MA DOKLADNIE INTUICYJNIE WCHODZIC I WSZYSTKO Z MARSZU BEZBLĘDNIE ROZUMIEĆ, PLATFORMA MA ROBIĆ NIESAMOWITE OSZLAMIAJACE WRAZENIE TAKZE WIZUALNE, DLATEGO WDROŻENIA KONIECZNE PRZEPIĘKNE GRAFIKI, (MOTYWEM PRZEWODNIKIEM CHARYZMATYCZNY ULTRA INNOWACYJNY MÓZG)  POWODOWAC UCZUCIE MUSZE TO MIEC\!\!\!\!\!\!\! TAK ZEBY JAK NAJWIECEJ LUDZI KUPILO SUBSKRYPCJE  
+, wydobywając maksymalną szczegółowość dla każdego z 19 paneli ekosystemu POTRZEBNY.AI. Oto absolutnie kompleksowe podsumowanie:notebooklm.google​  
+ARCHITEKTURA 10-20K API KEYS  
+Problem: Vercel limit 64KB dla zmiennych środowiskowych.  
+Rozwiązanie:notebooklm.google​  
+TIER B (12000+ kluczy operacyjnych): Medical APIs 5000+ → Supabase Vault (pgcrypto AES-256), dynamiczne pobieranie per panel  
+Secrets Manager: 1Password CLI lub Doppler do zarządzania rotacją co 30-90 dni  
+Bezpieczeństwo: Row Level Security (RLS), GitHub Secret Scanning, Least Privilege, na pewno Dostępne też 2FA jeśli ktoś chcę, obowiązkowe dla panelu pacjenta i terapeuty, przez numer tel, czy w jakichkolwiek inny sposób, aby pokazać moją „troskę” o ich bezpieczeństwo, że moja platforma spełnia wszelkie możliwe strandardy bezpieczeństwa. Natomiast prawdziwym priorytetem jest funkcjonalność, wzbudzenie oszołomienia, akcytacji, podniecenia i uczucia musze to mieć po wejściu oraz jakby poczucia jedności integralności i zjednoczenia w codzienność uzytkonikow. POTRZEBNY.AI jak sama nazwa wskazuje ma być tak potrzebny że niezastąpiony w życiu użytkowników, ma uzależniać, wręcz wchodzić do ich umysłów jako rozwiazanie genialne, jedyne w swoim rodzaju i zostające na długo w pamięci, powodującą zmianę sposobu myślenia i wewnętrzne poczucie tożsamości i przynależności z platformą POTRZEBNY AI to coś więcej niż zwykły operator Ai, to tożsamość, wspólnota (zwłaszcza chodzi tu właśnie o te przeróżne organizacje które będą z niego korzystać) POTRZEBNY AI MA BYĆ ICH NIEROZŁĄCZNĄ CZĘŚCIĄ I CZYMŚ BEZ CZEGO CI LUDZIE NIE POTRAFIĄ ŻYĆ, JEDNOCZEŚNIE ABSOLUTNIE KLKUCZOWE JEST STWORZENIE ABSOLUTNIE OSZALAMIĄJCEGO WRAZENIA NA START, PO WEJŚCIU W PLATFORME WEB, APP STORE, GOOGLE PLAY. KAŻDY MA ZAKOCHIWAĆ SIĘ OD PIERWSZEGO WRAZENIA, WZBUDZAĆ EMOCJE KTÓRE ZMUSZAJĄ GO PO  PROSTU PSYCHOLOGICZNIE ABY TO KUPIĆ, JEDNOCZEŚNIE MA IM SIĘ KOJARZYĆ Z ORGANIZACJA DO KTOREJ NALEZĄ I PRZYPOMINAĆ BY KONTYNUOWALI PRZYNALEŻNISTWO , PO PROSTU ICH ORGANIZACJ A= POTRZEBNY POTRZEBNY= STYL BYCIA \= POTRZEBNY ONI SAMI \= POTRZEBNY ROWNA SIE COS CO MUSZA MIEC I BEZ CZEGO NIE MOGA ZYC, KAZDY WCHODZAC TAM MUSI UZNAWAC, TAK POTRZEBNY AI ZMIENI MOJE ZYCIE, MUSZE TO MIEC, PO PROSTUY MUSZE, TO USLUGA JEDYNA W SWOIM RODZAJU, KTOREJ NIE MA NIGDZIE INDZIEJ I NIE BYLO NIGDZIE INDZIEJ. TO JEST COS JAK ODRYCIE PO PROSTU KAŻDY TEGO POTRZEBOWAL I TEZ TO MA, POTRZEBNY AI JEST POTRZEBNY W ICH ZYCIU, STAJE SIĘ ICH ŻYCIEM.                             ALE NATOMIAST NAJWAZNIEJSZE TERAZ GDY STARTUJE Z PLATFORMA ZEBY PO PROSTU KAZDY SERIO WYKUPOWAL MIESIECZNA SUBSKRYPCJE PO PROSTU, KLUCZOWE JEST TO ABY PO PRODSTU SPRZEDAC PRODUKT W PIERWSZYM MOMENCIE 3 DNI FREE SUBKRYPCJI A POTEM ROZPOCZYNA SIE PLATNOSC. UZYTWKONIK OTWIERAJAC PLATFORME/APLIKACJE MOZE SIE ZALOGOWAC PRZEZ MAILA, PRZEZ GOOGLE, LUB PRZEZ CO JESZCZE CHCE NP. APPLE LUB COŚ INNEGO JAK LATWO SKONFIGUROWAĆ. LOGUJE SIĘ SZYBKO I PROSTO hasło min. 8 cyfry i litery, min jedna duża litera, nie ma konieczność dodawania znaków specjalnych w haśle potem użytkownik wybiera panel (najpierw sekcja bez żadnych cen tylko wybór panelu) wybierasz swój panel BEZ DOSTĘPU DO INFORMACJI KTÓRY ILE KOSZTUJE, tylko wybierasz, po wejściu w panel użytkownik wybiera sobie albo uzytkonikow np. Nauczyciel/ Wykładowca w możliwie najprostszy sposób użycia moze dodać klasę i wpisać imię i nazwisko ucznia i cyk, potem przesyła materiały w jakiejkolwiek formie tylko chce, będzie jakaś preferowana, bo wiem ze w zależności od metody/typu przesłania czy to będzie załącznik wideo czy tekst, czy linku ai może lepiej generowac, ale chce dać w panelu administracyjnym jak najwiecej możliwości przesyłania i tworzenia treści które bezsporednio w wybranej spersonalizowanej formie trafia do uczniów, w jak najprostszy możliwy sposób TOTALNIE NIEOGARANIJACY, PRAWIE NIGDY NIE UZYWAJACY KOMPUTERA/INTERNETU, ZIELONY W SPRAWACH TECHNICZNYCH MA TO OGARNAC PO PROSTU PRZESYLA TRESCI CZY DODAJE UCZNIOW W FUNKCJI WYSZUKIWANIE. Każdy loguje się ma to być najszybsze możliwe aby zgarnąć jak najwiecej podaje mail i hasło, lub loguje się przez google, w następnym polu wybiera swój panel i ma do wyboru panele wszystkie do wyboru. Z czego konkretne grupy maja dostęp do konkretnych paneli. TU OSTATECZNA WERSJA PANELU LOGOWANIA TEN FRAGMENT WAŻNY: Wchodzisz i widzisz no tak żeby to robiło zajebiste wrażenie i wybierasz sobie role SĄ DWIE: PANEL ADMINISTRACYJNY,  PANEL SZKOLENIOWY, PANEL TELEBIM na start do wyboru i wybierasz sobie jedną administrator pod nią  dużo mniejszym drukiem znajdują się wszystkie panele administracyjne, w tym administracyjny personalizacyjny, supermózg, supermozg ultra.  POD PANELEM SZKOLENIOWYm to samo co w administracyjnym wszystkie panele wypisane tylko zamiast administracyjnych wypisane panele szkoleniowe i panele wspólne jako supermózg/supermózgultra, w TELEBIM LED ta sama zasada co w pozostałych widzisz tylko wspólne pamiętaj do wspólnych należą ZAWSZĄ dokładnie panele administrator personalizacyjny, PANEL SZKOLENIOWY PERSONALIZACYJNY. PO KLIKNIĘCIU W WYBRANY PANEL zaznaczasz sobie panele, które z wymienionych chcesz widzieć na stronie głównej   
+i informacja, że zawsze możesz potem zmienić w każdej chwili panele domyślne w ustawieniach jeśli wybiera jeden odrazu po wejściu w aplikacje pojawia się w tym jednym, natomiast jeśli wybrał kilka pojawia się odrazu w tym z którego ostatnio korzystał/a. pozostałe możesz dodac sobie do strony czy wszystko masz napisane wszystkie nazwy paneli i klikasz  rejestrujesz się potrzebne dane to mail, hasło, imię i nazwisko opcjonalnie numer telefonu GRATULACJE ZALOGOWANY jeśli ktoś wybrał panel szkoleniowy lub telebim musi podpiąć któreś z poniższych i przejść do dalszego etapu korzystając z ochoczą informacją, że korzysta z darmowego okresu próbnego,  (trwa tylko 3 dni ale informacja o czasie ma nie być eksponowana) i POTRZEBNY AI JEST CAŁKOWICIE DARMOWY a potem płaci tyle ile sobie wybierze w wybranym przez siebie planie 29PLN AI Basic, POTRZEBNY PRO 49 PLN (oznaczony jako najpopularniejszy), SUPERMÓZG 79PLN  (wszystko co w POTRZEBY PRO z dostępem, do nowego panelu dla subskrybentow SUPERMÓZG) rekordowy dostęp, panel supermózg i zaawansowane wideo oraz funkcje) jeden dostepny panel premium SUPERMÓZG ULTRA 699PLN najpotężniejszy panel naukowy na świecie oparty na 10 000 zmiennych i OPUS 4.5 i tak mniej wiecej ma to wyglądać w kazdym oczywiście w zaleznosci kto sobie jaki panel wybral: dostępne platnosci przez stripe Karta ,  
+Apple Pay ,  
+Google Pay ,  
+Link i  
+Klarna  
+(Obowiązkowo TYLKO dla panelu pacjenta i paneli terapeutycznych )oni mają że powinni podać też numer telefonu i 2FA, poniewdodajmy wszystkie jakie można sposób  i opcjonalne zgody neewsteler, i może obowiązkowa jak konieczność jakieś krótkie Rodo czy inne pliki cookie, ale jak nie potrzeba to bez jakichś koniecznych zgód na start, inaczej bez takich głupot to bez żadnej zgody i cyk masz konto, potem  NA POCZĄTKU MASZ DO WYBORU ROLĘ   
+GRUPA 1: PANELE ADMINISTRACYJNE (DARMOWE \- 0 PLN)  
+1\. Panel Nauczyciela (Teacher Admin)  
+Dla kogo: Nauczyciele szkół podstawowych/średnich, korepetytorzy  
+Cena: 0 PLN (Lifetime Free)  
+Funkcje:  
+Mass Upload & Distribution (1 plik → 30 spersonalizowanych wersji)  
+Classroom Analytics w czasie rzeczywistym  
+Automatyczne generowanie quizów/testów  
+System zaproszeń uczniów (kod/link)  
+Feedback AI dla uczniów na podstawie wyników  
+Tech: Next.js 15, Google Cloud Vision (OCR), Supabase Realtime, Groq Whisper  
+User Flow: Rejestracja → Utworzenie klasy → Upload materiału → Dystrybuuj → Analytics  
+Security: RLS (nauczyciel widzi tylko swoich uczniów), Privacy by Design  
+2\. Panel Wykładowcy (Lecturer Admin)  
+Cena: 0 PLN  
+Funkcje: Academic Content Hub, transkrypcja wykładów (Groq Whisper), integracja Semantic Scholar, testy akademickie, powiadomienia grupowe  
+Prowizja: Stripe Connect (70/30 split) przy sprzedaży kursów autorskich  
+3\. Panel Terapeuty (Therapist Admin)  
+Cena: 0 PLN  
+Funkcje: Szyfrowane notatki (AES-256-GCM), przydzielanie zadań CBT/DBT, monitoring nastroju pacjentów, zgody RODO Art. 9, alerty kryzysowe  
+Security: Zero-Knowledge Encryption (tylko terapeuta ma klucz), Local-First Transcription, audit logs pgaudit  
+RODO: Retencja 20 lat, Point-in-Time Recovery (PITR), eksport danych Art. 20 RODO  
+4\. Panel Lekarza Szkolącego (Doctor Trainer Admin)  
+Cena: 0 PLN (zarabia prowizję 30% od kursów)  
+Funkcje: Course Builder z case studies, certyfikacja CME (PDF z hash SHA-256), Virtual Patient AI, mentoring  
+Tech: React Hook Form \+ Zod (HL7 FHIR), JSONB w Supabase, DICOM API do RTG/MRI  
+5\. Panel Terapeuty Szkolącego (Therapist Trainer Admin)  
+Cena: 0 PLN  
+Funkcje: Superwizja zanonimizowanych sesji, ewaluacja kompetencji, biblioteka protokołów, forum zamknięte  
+6\. Panel Administracyjny Personalizacyjny   
+doslownie tworzenie swojej organizacji pelnej zaawansowanej personalizacji szkoleniowej i nie tylko. koszt po stronie osób szkolących się.  
+Cena: 0 PLN  
+Funkcje: White-label builder, AI transformation treści, CMS z tagowaniem, dystrybucja pracownikom, analityka HR  
+7\. Panel Rodzica (Parent Admin)  
+Cena: 0 PLN (Basic) / 49 PLN (Premium \- pełna analityka)  
+Funkcje: Dashboard dziecka, kontrola czasu, alerty, zarządzanie subskrypcją, wgląd w materiały  
+8\. Panel Administratora Platformy (Super Admin)  
+Dla kogo: Właściciel (Bartłomiej Potrzebowski)  
+Funkcje: God Mode, MRR/Churn analytics, user management, zarządzanie 5-10k API keys, Stripe/inFakt dashboard, Sentry logs DOSLOWNIE DOSTĘP DO WSZYSTKIE I MOŻLIWOSC DODAWANIA I TWORZENIA TOTALNIE NOWYCH SPERSONALIZOWANYCH PANELI NP. DLA CALEGO PSYCHOMEDIC BEZPOŚREDNIO Z PLATFORMY, AUTOMATYCZNIE JEDNOCZESNIE DLA APLIKACJI, MAKSYMALNE MOZLIWOCI KONTROLI I WERYFIKACJI, WIADOMO NIE POTRZEBUJE CZYTAC TEGO CO INNI PISZĄ, ALE CHCE MIEC PELNA I MAKSYMALNIE PROSTĄ MOŻLIWOŚCI ZARZĄDZANIA PLATFORMĄ BEZPOŚREDNIO Z TEGO PANELU. Jeśli u kogoś pojawia się jakiś błąd mogę szybko nim zarządzić z panelu administratora i naprawić. Mam dostęp do swojego panelu pod specjalnym hasłem, jest widoczny w inny sposób, zadni użytkownicy nie są w stanie w ogóle go zobaczyć. Dostęp do niego mam tylko logowanie z mojego głównego firmowego maila ai@potrzebny.ai po prostu loguje się do platformy z tego konkretnego maila i mam dostęp do wszystkich paneli, mogę zadawać nieograniczona ilość pytań jak każdy użytkownik, z tym że oni mają dostęp tylko do wybranych paneli wybierając swoją rolę na starcie przy logowaniu do platformy                                                    9\. PANEL PERPLEXITY MAX COMET ASISTANT integracja z z perplexity max comet asistant w trybie agent, gdzie mogę zlecić poprawki perplexity max agent, ale bez jakiekolwiek ryzyka ze gdziekolwiek jakkolwiek nawet w mikro stopniu mógłby zrobić coś nieobliczalnego czy rozpieprzyć platformę w jakichkolwiek sposób, to taka dodatkowa sekcja wolnego wybiegu dla comet asistatant do otwarcia w przeglądarce gdzie mogę zlecić perplexity comet max żeby cos ogarnęło np. Zbudowało nowy panel o dla kogoś o konkretnych wytycznych, albo naprawiła jakieś bugi, ale bez ryzyka ze cokolwiek zepsuje, wolny wybieg, żeby mógł pozwolić agentowi działać w pełni aby skutecznie oszczędzać mi czas, bez ryzyka ze cokolwiek popsuje, np możliwość zatwierdzenia wszystkich zmian przeglądarkowego agenta bezpośrednio przezemnie a on sam, bez mojej aprobaty nic nie może zrobić, specjalna integracja i przygotowanie abym mógł tworzyć, zbierać dane i komunikować posługując się w konkretnym do tego przeznaczonym polu gdzie zablokowany jest mój prawdziwy panel np. hasłem i agent nie może niczego zmienic , zrobić ryzykownego bez potwierdzenia z mojego głównego panelu administracyjnego, ale jednocześnie może działać na pełnych obrotach i panel jest tak skonstruowany aby maksymalnie wykorzystać możliwości przeglądarkowego agenta jako mojego ciężko zapierdalajacego za 50 pracownikow robola, a ja ze swojego panelu zatwierdzać każda jego zmianę ręcznie oddzielnie NIC NIE MOZE ZOSTAC WPROWADZONE BEZ MOJEJ ZGODY w postaci zatwierdzenia z zupełnie oddzielnego panelu z oddzielnym hasłem. Do panelu asystenta comet loguje się też ze specjalnego maila o treści asystent@potrzebny.ai natomiast właśnie dzięki temu ze ja mam pełna kontrole nad zatwierdzeniem tego co robi comet może on działać na pełnych obrotach bez żadnych , absolutnie żadnych granic, zupełny autopilot odpalam go i ten panel jest tak zaprogramowany ze agent się po nim porusza bosko, po prostu jest zaprogramowany do używaniu pod agenta comet asistant perplexity max, no ewentualnie asystenta przeglądarkowego claude, czy odpalenie z chrome/comet za pomocą claude bezpośrednio z claude desktop czy claude code, oni tam mogą robić totalnie wszystko, rewolucjonizować i naprawiać, i wdrażać platformę, debugować, przeprojektowywać kod, wprowadzać aktualizacje. Ale wszystko szczegółowo opisane trafia na koniec na biurko do mojego panelu gdzie mogę kliknąć i zatwierdzić albo wprowadzić kluczowe zmiany (także przy pomocy asystenta jak będę chciał XD) i odesłać asystentowi który który pozna zaaktualizowane instrukcja, integracja również z claude code, żebym po prostu z claude code mógł bezpośrednio wprowadzać tez zmiany w tych panelach administratora (mnie) czy panelu „comet max” platforma korzysta z insfrastuktury https://console.upstash.com/redis?teamid=af2045bc-a447-4c5f-8250-bd153a5bf256 w dojebanej wersji za 220usd miesięcznie w celu uzyskania   
+Każdy z tych paneli oprócz supermozg, researchu dla lekarzy czy telebimu oferuje możliwość totalnej i gigantycznej personalizacji wszystkiego co otrzyma od administratora, od stylu, po ton, dosłowne napisanie tego co chce się otrzymywać i w jaki sposób stale (personalizacja treści za pomocą wpisywania tego co się chce otrzymywać i dostawania tego za każdym razem dosłownie, taka sama opcja otrzymania tego co się chce otrzymać w każdym zapytaniu. oczywiście te tony, style, specyfika otrzymywanych treści i ograniczenia personalizacji w zależności od wybranego pakietu cenowego, z czego ten za POTRZEBNY PRO 49PLN oferuje już pełna funkcjonalność, wideo generowane tylko przez darmowe ai, ograniczone limity, natomiast 79PLN oferuje w praktycznym użyciu prawie  nieograniczone limity, oczywiście blokady żeby zabezpieczyć się przed nadużyciami, ale w jednoosobowym normalnym nawet bardzo intensywnym użyciu nieograniczone pod względem personalizacji tych treści które otrzymuje i generowania wszelkiej maści wszystkich możliwych pomocy naukowych z tego (tu można się wzorować trochę notebookom żeby te wszystkie tryby co w notebook oczywiście nie tak samo nazwane były DOSTĘPNE ( bardzo proste w użyciu) wszystko ma być na pierwszy rzut banalne i proste w użyciu, ale dla bardziej wymagających będą dodatkowe rozszerzone zaawansowane funkcje personalizacji, tak aby każdy był zachwycony, Ci którzy oczekują prostoty ją otrzymają, a Ci którzy chcą zaawansowanej personalizacji w każdym wymiarze do perfekcji rownież. Limity na generowanie treści zależne od wybranego pakietu cenowego, ilość i możliwości personalizacji również, natomiast nie chcę schodzić z wysokiej jakości jednocześnie dbając  o wysoką rentowność marża ma wynosić chociaż 85%. W panelach MEGA PREMIUM supermózg ultra 699PLN dla każdego   i PANEL BADAWCZY PREMIUM 799PLN dla lekarzy panele te mają być najlepsze na świecie w miarę możliwości i oferować claude opus 4.5 jako baza nieograniczona, oni mają się czuć premium i być premium w kontekście maksymalnej jakości jaką da się tylko uzyskać po prostu to mają być najlepsze panele na świecie tego typu, podobnie jak użytkownicy 79PLN tylko Ci korzystają ze znacznie tańszych modeli.   
+GRUPA 2: PANELE UŻYTKOWNIKÓW KOŃCOWYCH (PŁATNE)  
+9\. Panel Ucznia (Student Panel)  
+Cena: 29 PLN (Basic) / 49 PLN (Pro) / 79 PLN (Ultra \+ Supermózg)  
+Funkcje:  
+AI Personalizacja: Wzrokowiec/Słuchowiec/ADHD Mode/Dysleksja/ASD  
+Note Generator (1 kliknięcie)  
+Flashcards & Quiz automatyczne  
+AI Tutor (DeepSeek/Claude)  
+Gamifikacja (XP, ligi, streaks)  
+Tech: DeepSeek V3 (tani), Google TTS (pl-PL-Neural2-A), Mermaid.js (mapy myśli), Bionic Reading, OpenDyslexic font  
+Personalizacja:  
+ADHD: Tekst → bullet points (max 300 słów), checkpoint co 3 min  
+Dysleksja: Uproszczona składnia, zwiększona interlinia 1.5x, audio każdy akapit  
+ASD: Usunięcie metafor/idiomów, logiczne ciągi przyczynowo-skutkowe  
+User Flow: Zdjęcie notatki → AI OCR → Fiszki → Quiz → XP  
+10\. Panel Studenta Akademickiego (University Student)  
+Cena: 29/49/79 PLN  
+Funkcje: Transkrypcja wykładów, Academic Summarizer, Citation Helper (APA/Vancouver), Exam Prep, Focus Mode (Pomodoro)  
+API: Mathpix (wzory matematyczne/chemiczne)  
+11\. Panel Pacjenta (Patient Panel)  
+Cena: 29/49/79 PLN  
+Funkcje: Homework od terapeuty, Mood Tracker (wykresy trendów), Secure Journal (szyfrowany), Psychoedukacja, SOS (Panic Button \- 116 123\)  
+Security: RODO Art. 9, AES-256, TLS 1.3, Zero-Knowledge, dane tylko dla pacjenta \+ terapeuta, Frankfurt servers (EU)  
+12\. Panel Studenta Medycznego/Kursanta/ LEKARZA KTÓRY SZKOLI SIĘ/TERAPEUTY KTÓRY SZKOLI SIĘ u lekarza administratora np. Mój dr Barlik, ma w tej bazie lekarzy ktorzy się u niego szkolą i podobnie jak panele ucznia/studenta zawiera FUNKCJE TOTALNEJ PERSONALIZACJI TREŚCI WYDAWANYCH OD LEKARZA administratora tak aby maksymalnie umożliwić personalizacje treści, ze szczególnym uwzględniem każdej preferencji i stylu nauczania. Ten panel ma to co nie ma tradycyjny tryb nauczania, uczysz się konkretnego materiału czym chcesz, w jaki sposób chcesz, najskuteczniej jak chcesz, najciekawiej jak chcesz (Medical Trainee)  
+Cena: 29/49/79 PLN  
+Funkcje: Interaktywne Case Studies, Virtual Patient AI (Claude Sonnet), Exam Simulator, Procedure Checklists, Mentoring Feedback  
+User Flow: Otrzymuje przypadek → Zleca badania → Diagnoza → AI \+ Mentor oceniają  
+13\. PANEL SZKOLENIOWY PERSONALIZACYJNY  
+Cena: 29/49/79 PLN (lub B2B firmowy)  
+Funkcje: Adaptive Learning (szkolenia firmowe), Micro-learning, Certyfikaty automatyczne, Knowledge Retrieval chatbot/ możliwość dołączenia do PANELI TWORZONYCH PRZEZ ADMINISTRATOROW PERSONALIZACYJNYCH I OTRZYMYWANIE WSZYSTKICH RODZAJOW SPERSONALIZOWANYCH TREŚCI, TAK SAMO JAK POZOSTALE PANELE MAJA MOZLIWOSC WYBORU WSZYSTKICH MOZLIWYCH TYPOW PERSONALIZACJI, KAZDY PANEL TO MA, TO JEST NAJWAZNIEJSZE ZE TRESCI BEDA SPERSONALIZOWANE TAK JAK KTO LUBI, LUB CHCE LUB JEST TA DRUGA OSOBA, TO W TYM WSZYSTKIM JEST NAJWAZNIEJSZE DLA MOJEGO WIJZJONERSKIEGO SERDUSZKA. KAZDY DOSTANIE TAKI TRYB TRESCI JAK ZAPRAGNIE ZAIMPLEMENTOWANE, ELEMENTY PERSONALIZACYJNE DO KAŻDEGO Z PANELI SZKOLENIOWYCH KTÓRE OPSISYWALEM DOKLADNIE  
+GRUPA 3: PANELE SPECJALNE & PREMIUM  
+14\. Panel Supermózg (Bonus)  
+Dostęp: Automatycznie dla 79 PLN (Ultra)  
+Funkcje: Cognitive Training (Dual N-Back, szybkie czytanie), Neuro-Education, Focus Tools, Supplement Guide (basic z disclaimerem), Sleep Optimization  
+15\. Panel Supermózg ULTRA (Standalone)  
+Cena: 699 PLN miesięcznie \+ dostęp do wszystkich funkcjonalności platformy. Extended Thinking, 200K+ context window) najlepszy panel tego typu na świecie nr1 in the world. Dla kogo: CEO, przedsiębiorcy, programiści, high-performers, pasjonaci, (NIE muszą być związani ze szkołą/terapią, to może być każdy)  
+Funkcje (wykorzystanie 4000+ API):  
+AI Stack Builder: 300+ nootropików (L-Tyrozyna, Alpha-GPC) \+ Peptydy (BPC-157, Semax, Selank) \- Opus 4.5 analiza synergii  
+Farmakogenomika Edukacyjna: Upload 23andMe → analiza MTHFR, metabolizm kofeiny (lokalnie w przeglądarce, DNA nie trafia do chmury\!)  
+Neuro-Optymalizacja: Wiedza o neurotoksynach, pleśń, aldehydy, analiza etykiet (Vision API)  
+Wearable Integration: Oura Ring/Whoop API, korelacja HRV z suplementami  
+Advanced Longevity: Protokoły Hubermana/Attii dostosowane przez AI  
+Safety: Guardrail Prompt ("NIE diagnozuj, NIE sugeruj leków Rx"), DrugBank API checker (blocker czerwony alert przy interakcjach)  
+API Tiers: Tier 52 (Nootropics), Tier 72 (Peptides), Tier 67 (Supplements), Tier 53 (Drug Interactions), Tier 73 (Epigenetics), Tier 68 (Wearables)  
+16\. Panel Badawczy Premium (Medical Research)  
+Cena: 799 PLN miesięcznie  
+Dla kogo: Lekarze specjaliści, naukowcy (WYMAGA weryfikacji PWZ \- API NIL lub OCR \+ modulo-11)  
+Silnik: Claude Opus 4.5 (Extended Thinking, 200K+ context window)  
+Funkcje (najgłębsza spec):  
+AI Medical Oracle: Analiza wielochorobowości, Safety Layer (weryfikacja halucynacji vs PubMed)  
+Deep Research & Synthesis: Automatyczne systematic reviews w minuty, cytowania APA/Vancouver  
+Precision Medicine & Genomics: Analiza VCF, farmakogenomika (Warfarin \+ CYP2C9 → CPIC guidelines)  
+Advanced Drug Interaction Checker Pro: Molekularna analiza (cytochromy P450), genotyp \+ suplementy  
+EHR Integration Ready: Import FHIR R4, "Second Opinion" analysis  
+API Integration (5000+):notebooklm.google​  
+Publikacje: PubMed E-utilities (50M articles), Wiley TDM (Text & Data Mining premium), Elsevier Scopus, Semantic Scholar (SPECTER2 embeddings)  
+Kliniczne: ClinicalTrials.gov API v2 (400K trials, filter.overallStatus=RECRUITING), RxNorm, DrugBank, OpenFDA (Adverse Events)  
+Genomika & Precision Medicine: OncoKB (mutacje nowotworowe \+ terapie celowane), cBioPortal, PharmGKB (farmakogenomika), dbSNP (NCBI)  
+User Flow:notebooklm.google​  
+Logowanie (Google Auth)  
+Weryfikacja PWZ (bramka \- algorytm modulo-11 → API NIL)  
+Dashboard Badawczy (Opisz przypadek / Analiza Leków / Przegląd Literatury / Genomika)  
+Wpisanie: "Pacjent 45 lat, oporny na SSRI, mutacja MTHFR, podejrzenie ChAD. Znajdź protokoły 2024-2025"  
+Output: Raport PDF (Diagnoza Różnicowa, Protokoły, Ryzyka, Bibliografia z PubMed/Wiley)  
+Security: AES-256-GCM (Supabase Vault), Zero-Retention AI (nie trenują modeli), pełny audit log (kto, kiedy, o co pytał \- wymóg RODO)  
+18\. Panel ćwiczeń terapeutycznych dostęp do mojej ultra zaawansowanej bazy bazy ćwiczeń terapeutycznych AI \- to jest dodatkowa subkrybcja tylko z tym ( terapeuci maja ten panel wbudowany) i moga przesyłać materiały swoim pacjentom, w cenie 29 PLN miesiecznie dostep do tysięcy ćwiczeń i moga je przesyłac pacjentom bezposrednio i nadzorować czy zrobili wszystko itd itd. Jakie rezultaty z czym trudnosci. podobne funkcjonalności uwzględniasz  rowniez w pozostalych panelach platformy do każdego panelu inna baza ćwiczen szkoleniowych/terapeutycznych m.in. z mojej bazy ponad 5000 variables zbiory oddzielne dla kazdej roli lekarza, terapuety, nauczyciela itd itd.  
+19\. PANEL TELEBIM LED Płatności za telebim dostępne tylko w wersji web, App Store i google play NIE DODAJE MOZLIWOSCI PLATNOSCI ZA TELEBIM, telebim obsługuje przelewy, Karty, BLIK, Apple Pay, Google Pay, Klarna, czyli dodatkowo karty i blik. /dashboard/telebim                    \# Main dashboard  
+20\.   /dashboard/telebim/create           \# Nowa kampania  
+21\.   /dashboard/telebim/orders           \# Moje zamówienia  
+22\.   /dashboard/telebim/orders/\[id\]      \# Szczegóły  
+23\.   /dashboard/telebim/analytics        \# Statystyki  
+24\. 💰 PRICING & PAKIETY  
+25\. Pakiet	Cena	Opis	Format  
+26\. Grafika Standard	499 PLN/mc	Statyczna grafika 24/7	PNG/JPG/WebP (5MB max)  
+27\. Wideo Premium	1 299 PLN/mc	Video loop 30 sekund	MP4/MOV (50MB max)  
+28\. Combo	1 699 PLN/mc	Grafika \+ Wideo auto-rotate	Both (zmiana co 30s)  
+29\. Enterprise Multi	3 999 PLN/mc	5+ wyświetlaczy	Sync all displays  
+30\. 🔧 INFRASTRUKTURA TECHNICZNA  
+31\. Integracja AMUSO ECMS  
+32\. text  
+33\. \# .env.production  
+34\. AMUSO\_BASE\_URL=https://amuso.ecms.pl  
+35\. AMUSO\_LOGIN=Belsk  
+36\. AMUSO\_PASSWORD=UPLED123  
+37\.   
+38\. \# Dane LED  
+39\. LED\_SCREEN\_ID=258  
+40\. LED\_SCREEN\_MAC=68:1d:ef:4c:fc:d5  
+41\. LED\_SCREEN\_NAME="Ekran LED Belsk"  
+42\. LED\_RESOLUTION\_WIDTH=672  
+43\. LED\_RESOLUTION\_HEIGHT=336  
+44\. LED\_PHYSICAL\_MM=6720x3360  
+45\. LED\_PLAYER\_VERSION=1.09  
+46\.   
+47\. \# Zasoby domyślne  
+48\. DEFAULT\_PLAYLIST\_ID=1431  
+49\. DEFAULT\_SCHEDULE\_ID=180  
+50\. Techstack  
+51\. text  
+52\. Frontend: Next.js 15 \+ React 19 \+ TailwindCSS  
+53\. Backend: tRPC \+ Node.js 20  
+54\. Database: PostgreSQL 15 \+ Prisma  
+55\. Queue: BullMQ \+ Redis (Upstash Pro \- 220 USD/mc)  
+56\. Media: Cloudinary \+ Sharp  
+57\. AI: OpenAI DALL-E 3 \+ Runway ML  
+58\. Automation: Playwright (headless)  
+59\. Payment: Stripe  
+60\. Deployment: Vercel (web) \+ Railway (workers)  
+61\. 🎨 UI/UX STRUCTURE  
+62\. STRONA 1: Zamów Kampanię (/dashboard/telebim/create)  
+63\. typescript  
+64\. // 1\. HEADER  
+65\. \<PageHeader\>  
+66\.   \<Title\>Zamów Reklamę na Telebim LED\</Title\>  
+67\.   \<Subtitle\>Twoja reklama 24/7 na ekranie publicznym w Belsku\</Subtitle\>  
+68\.   \<LocationBadge\>📍 Odrywołek, ul. 725 | MAC: 68:1d:ef:4c:fc:d5\</LocationBadge\>  
+69\. \</PageHeader\>  
+70\.   
+71\. // 2\. STEP 1: WYBÓR PAKIETU (4 karty)  
+72\. \<PackageSelector\>  
+73\.   \<PackageCard  
+74\.     name="Grafika Standard"  
+75\.     price="499 PLN/mc"  
+76\.     features={\["✅ Statyczna grafika", "✅ 24/7 loop", "✅ 1 zmiana", "✅ Spersonalizacja"\]}  
+77\.   /\>  
+78\.   \<PackageCard  
+79\.     name="Wideo Premium"  
+80\.     price="1 299 PLN/mc"  
+81\.     features={\["✅ Wideo profesjonalne", "✅ Do 60 sekund", "✅ 2 zmiany", "✅ AI upscaling"\]}  
+82\.   /\>  
+83\.   \<PackageCard  
+84\.     name="Combo G+V"  
+85\.     price="1 699 PLN/mc"  
+86\.     features={\["✅ Grafika \+ Wideo", "✅ Auto-rotate 30s", "✅ 3 zmiany", "✅ Premium AI"\]}  
+87\.     isPopular  
+88\.   /\>  
+89\.   \<PackageCard  
+90\.     name="Enterprise"  
+91\.     price="3 999 PLN/mc"  
+92\.     features={\["✅ 5+ wyświetlaczy", "✅ Sync real-time", "✅ Dedykowany support", "✅ API access"\]}  
+93\.   /\>  
+94\. \</PackageSelector\>  
+95\.   
+96\. // 3\. STEP 2: DANE KAMPANII  
+97\. \<FormSection title="Informacje o Reklamie"\>  
+98\.   \<TextField name="company\_name" label="Nazwa firmy" required /\>  
+99\.   \<TextField name="contact\_email" label="Email" type="email" required /\>  
+100\.   \<Select name="industry" label="Branża" required /\>  
+101\.   \<FileUpload name="logo" label="Logo" accept="image/\*" maxSize={5242880} /\>  
+102\. \</FormSection\>  
+103\.   
+104\. // 4\. STEP 3: CREATIVE BRIEF  
+105\. \<FormSection title="Opisz Reklamę"\>  
+106\.   \<Textarea  
+107\.     name="description"  
+108\.     label="Co chcesz wyświetlić?"  
+109\.     placeholder="np. Promocja \-30% na pizze w piątek-niedzielę"  
+110\.     maxLength={500}  
+111\.     required  
+112\.   /\>  
+113\.   \<MultiSelect name="colors" label="Preferowane kolory" /\>  
+114\.   \<RadioGroup  
+115\.     name="style"  
+116\.     label="Styl"  
+117\.     options={\[  
+118\.       { value: 'modern', label: 'Nowoczesny' },  
+119\.       { value: 'vibrant', label: 'Kolorowy & energiczny' },  
+120\.       { value: 'professional', label: 'Profesjonalny' },  
+121\.       { value: 'playful', label: 'Zabawny' }  
+122\.     \]}  
+123\.   /\>  
+124\. \</FormSection\>  
+125\.   
+126\. // 5\. STEP 4: SCHEDULING  
+127\. \<FormSection title="Kiedy Wyświetlać?"\>  
+128\.   \<DatePicker name="start\_date" label="Data start" minDate={tomorrow()} required /\>  
+129\.   \<DatePicker name="end\_date" label="Data koniec" required /\>  
+130\.   \<Checkbox name="all\_day" label="24/7 codziennie" defaultChecked /\>  
+131\. \</FormSection\>  
+132\.   
+133\. // 6\. STEP 5: PODSUMOWANIE & CHECKOUT  
+134\. \<SummaryCard\>  
+135\.   \<SummaryRow label="Pakiet" value={selected.name} /\>  
+136\.   \<SummaryRow label="Cena" value={\`${selected.price}\`} highlight /\>  
+137\.   \<SummaryRow label="Okres" value={\`${startDate} \- ${endDate}\`} /\>  
+138\.   \<SummaryRow label="Razem" value={totalPrice} highlight large /\>  
+139\. \</SummaryCard\>  
+140\.   
+141\. \<StripeCheckout  
+142\.   amount={totalPrice}  
+143\.   currency="PLN"  
+144\.   onSuccess={handlePaymentSuccess}  
+145\. /\>  
+146\. States:  
+147\.   
+148\. ⏳ Loading: "Przetwarzamy Twoją kampanię..."  
+149\.   
+150\. ✅ Success: "Reklama zatwierdzana\! Pojawi się za max 24h"  
+151\.   
+152\. ❌ Error: Retry \+ support link  
+153\.   
+154\. STRONA 2: Moje Zamówienia (/dashboard/telebim/orders)  
+155\. typescript  
+156\. \<PageHeader\>  
+157\.   \<Title\>Moje Kampanie\</Title\>  
+158\.   \<FilterBar\>  
+159\.     \<Select name="status" options={\['Wszystkie', '🟢 Aktywne', '📅 Zaplanowane', '⏳ Wygasłe'\]} /\>  
+160\.   \</FilterBar\>  
+161\. \</PageHeader\>  
+162\.   
+163\. \<OrdersList\>  
+164\.   {orders.map(order \=\> (  
+165\.     \<OrderCard key={order.id}\>  
+166\.       \<Badge status={order.status}\>{order.statusLabel}\</Badge\>  
+167\.       \<h3\>{order.company\_name}\</h3\>  
+168\.       \<p className="text-gray-600"\>{order.description}\</p\>  
+169\.         
+170\.       \<Grid cols={2} gap={4}\>  
+171\.         \<InfoRow label="Pakiet" value={order.packageType} /\>  
+172\.         \<InfoRow label="Cena" value={\`${order.amount / 100} PLN\`} /\>  
+173\.         \<InfoRow label="Start" value={formatDate(order.startDate)} /\>  
+174\.         \<InfoRow label="Koniec" value={formatDate(order.endDate)} /\>  
+175\.       \</Grid\>  
+176\.         
+177\.       {order.contentUrl && (  
+178\.         \<img src={order.contentUrl} alt="Preview" className="w-full h-32 object-cover rounded mt-4" /\>  
+179\.       )}  
+180\.         
+181\.       \<Buttons\>  
+182\.         \<Button onClick={() \=\> viewDetails(order.id)}\>📋 Szczegóły\</Button\>  
+183\.         {order.status \=== 'active' && \<Button onClick={() \=\> cancelOrder(order.id)}\>❌ Anuluj\</Button\>}  
+184\.       \</Buttons\>  
+185\.     \</OrderCard\>  
+186\.   ))}  
+187\. \</OrdersList\>  
+188\. STRONA 3: Szczegóły Zamówienia (/dashboard/telebim/orders/\[id\])  
+189\. typescript  
+190\. \<PageHeader\>  
+191\.   \<BackButton /\>  
+192\.   \<Title\>Zamówienie \#{order.id}\</Title\>  
+193\.   \<StatusBadge status={order.status} /\>  
+194\. \</PageHeader\>  
+195\.   
+196\. \<TwoColumnLayout\>  
+197\.   {/\* LEWA KOLUMNA \*/}  
+198\.   \<Card\>  
+199\.     \<CardTitle\>Informacje\</CardTitle\>  
+200\.     \<DetailRow label="Firma" value={order.company\_name} /\>  
+201\.     \<DetailRow label="Pakiet" value={order.packageType} /\>  
+202\.     \<DetailRow label="Cena" value={\`${order.amount / 100} PLN\`} /\>  
+203\.     \<DetailRow label="Status AMUSO" value={order.amusoStatus} /\>  
+204\.     \<DetailRow label="Media ID" value={order.amusoMediaId} copyable /\>  
+205\.   \</Card\>  
+206\.   
+207\.   {/\* PRAWA KOLUMNA \*/}  
+208\.   \<Card\>  
+209\.     \<CardTitle\>Podgląd\</CardTitle\>  
+210\.     {order.contentUrl && \<img src={order.contentUrl} alt="Campaign" className="w-full rounded" /\>}  
+211\.   \</Card\>  
+212\.   
+213\.   \<Card\>  
+214\.     \<CardTitle\>Status LED 🖥️\</CardTitle\>  
+215\.     {order.latestScreenshot && \<img src={order.latestScreenshot} alt="Live" className="w-full rounded" /\>}  
+216\.     \<Button onClick={() \=\> refreshScreenshot(order.id)}\>🔄 Odśwież\</Button\>  
+217\.   \</Card\>  
+218\.   
+219\.   \<Card\>  
+220\.     \<CardTitle\>Statystyki\</CardTitle\>  
+221\.     \<StatRow label="Wyświetlenia" value={order.totalImpressions} /\>  
+222\.     \<Chart type="line" data={impressionData} /\>  
+223\.   \</Card\>  
+224\. \</TwoColumnLayout\>  
+225\.   
+226\. \<ActionsSection\>  
+227\.   {order.status \=== 'active' && (  
+228\.     \<\>  
+229\.       \<Button onClick={() \=\> extendPeriod(order.id)}\>📅 Przedłuż\</Button\>  
+230\.       \<Button onClick={() \=\> updateContent(order.id)}\>🖼️ Zmień treść\</Button\>  
+231\.     \</\>  
+232\.   )}  
+233\.   \<Button variant="outline" onClick={() \=\> downloadReport(order.id)}\>📊 Raport\</Button\>  
+234\. \</ActionsSection\>  
+235\. 🤖 AUTOMATYZACJA (Workflow)  
+236\. Pełny Flow: Płatność → LED  
+237\. text  
+238\. 1\. PŁATNOŚĆ STRIPE  
+239\.    └─\> Webhook: payment\_intent.succeeded  
+240\.   
+241\. 2\. TWORZENIE ZAMÓWIENIA  
+242\.    └─\> Create Order (DB)  
+243\.    └─\> Status: "payment\_verified"  
+244\.   
+245\. 3\. DODANIE DO QUEUE (Redis/BullMQ)  
+246\.    └─\> Priorytet: 1  
+247\.    └─\> Job ID: order.id  
+248\.   
+249\. 4\. AI CONTENT GENERATION (Worker)  
+250\.    └─\> OpenAI DALL-E 3: generuj 3 warianty  
+251\.    └─\> Sharp: resize 6720x3360px  
+252\.    └─\> Cloudinary: upload \+ CDN  
+253\.    └─\> Status: "uploading"  
+254\.   
+255\. 5\. PLAYWRIGHT AUTOMATION (Worker \#2)  
+256\.    └─\> Login do AMUSO ECMS (session)  
+257\.    └─\> Upload pliku (ID zwrot)  
+258\.    └─\> Dodaj do Playlist (ID: 1431\)  
+259\.    └─\> Update Schedule (ID: 180\)  
+260\.    └─\> Status: "live"  
+261\.   
+262\. 6\. NOTYFIKACJE  
+263\.    └─\> Email do klienta: "✅ Reklama LIVE"  
+264\.    └─\> Dashboard update  
+265\.   
+266\. 7\. MONITORING (Cron co 30 min)  
+267\.    └─\> Screenshot z LED  
+268\.    └─\> Check status  
+269\.    └─\> Log to DB  
+270\. State Machine  
+271\. typescript  
+272\. type OrderStatus \=   
+273\.   | 'pending'           // czeka  
+274\.   | 'payment\_verified'  // zapłacone  
+275\.   | 'generating'        // AI tworzy  
+276\.   | 'uploading'         // Playwright ładuje  
+277\.   | 'live'              // wyświetla się ✅  
+278\.   | 'scheduled'         // zaplanowana  
+279\.   | 'expired'           // skończona  
+280\.   | 'cancelled';        // anulowana  
+281\. 📊 DATABASE SCHEMA  
+282\. text  
+283\. model Order {  
+284\.   id              String   @id @default(cuid())  
+285\.   userId          String  
+286\.     
+287\.   // Pakiet  
+288\.   packageType     String   // GRAPHICS\_STANDARD | VIDEO\_PREMIUM | COMBO | ENTERPRISE  
+289\.   amount          Int      // grosz (PLN × 100\)  
+290\.     
+291\.   // Firma  
+292\.   companyName     String  
+293\.   contactEmail    String  
+294\.   phone           String?  
+295\.   logo            String?  // URL  
+296\.   industry        String?  
+297\.     
+298\.   // Treść  
+299\.   description     String  
+300\.   colors          String\[\] // array  
+301\.   style           String   // modern | vibrant | professional | playful  
+302\.     
+303\.   // Scheduling  
+304\.   startDate       DateTime  
+305\.   endDate         DateTime  
+306\.   allDay          Boolean  @default(true)  
+307\.     
+308\.   // AMUSO Integration  
+309\.   amusoMediaId    String?  
+310\.   amusoPlaylistId String   @default("1431")  
+311\.   amusoScheduleId String   @default("180")  
+312\.   amusoStatus     String?  
+313\.     
+314\.   // Content  
+315\.   contentUrl      String?  
+316\.   contentType     String   // image | video | mixed  
+317\.     
+318\.   // Status  
+319\.   status          String   @default("pending")  
+320\.     
+321\.   // Monitoring  
+322\.   lastScreenshot  String?  
+323\.   lastScreenshotTime DateTime?  
+324\.   totalImpressions Int     @default(0)  
+325\.     
+326\.   // Payment  
+327\.   stripePaymentId String?  
+328\.     
+329\.   // Metadata  
+330\.   createdAt       DateTime @default(now())  
+331\.   updatedAt       DateTime @updatedAt  
+332\.     
+333\.   @@index(\[userId\])  
+334\.   @@index(\[status\])  
+335\. }  
+336\.   
+337\. model Screenshot {  
+338\.   id        String   @id @default(cuid())  
+339\.   orderId   String  
+340\.   url       String  
+341\.   capturedAt DateTime @default(now())  
+342\.     
+343\.   @@index(\[orderId\])  
+344\. }  
+345\. 🔐 INTEGRACJA AMUSO ECMS  
+346\. Playwright Automation Script  
+347\. typescript  
+348\. class AmusoClient {  
+349\.   async uploadToLED(order: Order): Promise\<string\> {  
+350\.     // 1\. Login  
+351\.     await page.goto('https://amuso.ecms.pl/');  
+352\.     await page.fill('input\[type="text"\]', AMUSO\_LOGIN);  
+353\.     await page.fill('input\[type="password"\]', AMUSO\_PASSWORD);  
+354\.     await page.click('button\[type="submit"\]');  
+355\.       
+356\.     // 2\. Upload  
+357\.     await page.goto('https://amuso.ecms.pl/files/?p=103');  
+358\.     await page.setInputFiles('\#f\_file', order.contentPath);  
+359\.     await page.fill('\#f\_nazwa', \`POTRZEBNY-${order.id}-${Date.now()}\`);  
+360\.     await page.click('button\[type="submit"\]');  
+361\.       
+362\.     const mediaId \= await page.locator('.multimedia-item').first().getAttribute('data-id');  
+363\.       
+364\.     // 3\. Add to Playlist  
+365\.     await page.goto(\`https://amuso.ecms.pl/playlists/?p=5\&id\_=1431\`);  
+366\.     await page.click(\`\[data-media-id="${mediaId}"\]\`);  
+367\.     await page.fill('input\[name="czas"\]', '10');  
+368\.     await page.click('button.add-to-playlist');  
+369\.       
+370\.     // 4\. Update Schedule  
+371\.     await page.goto(\`https://amuso.ecms.pl/schedules/?p=5\&id\_h=180\`);  
+372\.     const startStr \= formatDateTime(order.startDate);  
+373\.     const endStr \= formatDateTime(order.endDate);  
+374\.     await page.fill('input\[name="data\_start"\]', startStr);  
+375\.     await page.fill('input\[name="data\_stop"\]', endStr);  
+376\.     await page.check('input\[name="petla"\]');  
+377\.     await page.selectOption('select\[name="powtarzaj"\]', 'codziennie');  
+378\.     await page.click('button\[type="submit"\]');  
+379\.       
+380\.     return mediaId;  
+381\.   }  
+382\.     
+383\.   async getScreenshot(): Promise\<Buffer\> {  
+384\.     const timestamp \= Date.now();  
+385\.     await page.goto(\`https://amuso.ecms.pl/screens/show\_screenshot.php?id\_s=258\&ts=${timestamp}\`);  
+386\.     return await page.screenshot({ type: 'png' });  
+387\.   }  
+388\. }  
+389\. 💳 TRPC ROUTES  
+390\. typescript  
+391\. const telebimRouter \= t.router({  
+392\.   create: t.procedure  
+393\.     .input(z.object({  
+394\.       packageType: z.enum(\['GRAPHICS\_STANDARD', 'VIDEO\_PREMIUM', 'COMBO\_GRAPHICS\_VIDEO', 'ENTERPRISE\_MULTI'\]),  
+395\.       companyName: z.string().min(1),  
+396\.       description: z.string().min(10),  
+397\.       colors: z.array(z.string()),  
+398\.       style: z.string(),  
+399\.       startDate: z.date(),  
+400\.       endDate: z.date()  
+401\.     }))  
+402\.     .mutation(async ({ input, ctx }) \=\> {  
+403\.       const price \= PRICES\[input.packageType\];  
+404\.         
+405\.       const session \= await stripe.checkout.sessions.create({  
+406\.         line\_items: \[{  
+407\.           price\_data: {  
+408\.             currency: 'pln',  
+409\.             product\_data: { name: input.packageType },  
+410\.             unit\_amount: price  
+411\.           },  
+412\.           quantity: 1  
+413\.         }\],  
+414\.         success\_url: \`${process.env.APP\_URL}/dashboard/telebim/success\`,  
+415\.         cancel\_url: \`${process.env.APP\_URL}/dashboard/telebim/create\`,  
+416\.         metadata: { userId: ctx.user.id, ...input }  
+417\.       });  
+418\.         
+419\.       return { checkoutUrl: session.url };  
+420\.     }),  
+421\.   
+422\.   list: t.procedure.query(async ({ ctx }) \=\> {  
+423\.     return await prisma.order.findMany({  
+424\.       where: { userId: ctx.user.id },  
+425\.       orderBy: { createdAt: 'desc' }  
+426\.     });  
+427\.   }),  
+428\.   
+429\.   getById: t.procedure.input(z.string()).query(async ({ input, ctx }) \=\> {  
+430\.     return await prisma.order.findUniqueOrThrow({  
+431\.       where: { id: input }  
+432\.     });  
+433\.   })  
+434\. });  
+435\. 🎯 PRICING STRATEGY  
+436\. text  
+437\. Operating Cost per Order:  
+438\. ├─ Stripe fee: 2.9% \+ 0.30 PLN  
+439\. ├─ DALL-E 3 generation: \~5-10 PLN  
+440\. ├─ Cloudinary: \<1 PLN  
+441\. ├─ Infrastructure: 30 PLN (spread 5-10 orders/day)  
+442\. └─ Total: \~15-20 PLN  
+443\.   
+444\. Profit Margin per Pakiet:  
+445\. ├─ Graphics 499 PLN → Margin: 85% (425 PLN)  
+446\. ├─ Video 1299 PLN → Margin: 85% (1103 PLN)  
+447\. ├─ Combo 1699 PLN → Margin: 85% (1444 PLN)  
+448\. ├─ Enterprise 3999 PLN → Margin: 85% (3399 PLN)  
+449\.   
+450\. Revenue Model (Conservative):  
+451\. ├─ 5 orders/dzień × 499 PLN \= 2495 PLN/dzień  
+452\. ├─ 2495 × 30 dni \= 74850 PLN/mc  
+453\. ├─ Profit @85%: 63600 PLN/mc  
+454\. 🚀 DEPLOYMENT CHECKLIST  
+455\.  Playwright automation working  
+456\.   
+457\.  AMUSO credentials secured (Vault)  
+458\.   
+459\.  Stripe webhook endpoints verified  
+460\.   
+461\.  Email notifications configured  
+462\.   
+463\.  Redis queue tested  
+464\.   
+465\.  Monitoring alerts active  
+466\.   
+467\.  Database migrations done  
+468\.   
+469\.  Error handling & retries working  
+470\.   
+471\.  Screenshot capture working  
+472\.   
+473\.  Load testing (100 concurrent orders)  
+474\.   
+475\. 📝 NOTES DLA CLAUDE CODE  
+476\. Priorytet Implementacji:  
+477\.   
+478\. Create form (all 5 steps)  
+479\.   
+480\. Stripe integration \+ webhook handler  
+481\.   
+482\. Database models \+ migrations  
+483\.   
+484\. Playwright automation worker  
+485\.   
+486\. Order list \+ details pages  
+487\.   
+488\. Admin monitoring dashboard  
+489\.   
+490\. Email notifications  
+491\.   
+492\. Analytics & reporting  
+493\.   
+494\. File Structure:  
+495\.   
+496\. text  
+497\. apps/web/  
+498\. ├─ app/dashboard/telebim/  
+499\. │  ├─ create/page.tsx  
+500\. │  ├─ orders/page.tsx  
+501\. │  └─ orders/\[id\]/page.tsx  
+502\. apps/automation/  
+503\. ├─ src/workers/amuso-upload.ts  
+504\. ├─ src/lib/amuso-client.ts  
+505\. packages/api/  
+506\. └─ src/routers/telebim.ts  
+507\. Czas Wdrożenia: 1 dzień (full access)  
+508\.   
+509\. Koniec specyfikacji Panel \#19. Gotowy do implementacji.  
+INFRASTRUKTURA  
+Płatności:notebooklm.google​  
+Stripe: Karty, BLIK, Apple Pay, Google Pay, Klarna  
+Fakturowanie: Automatyczne Stripe → inFakt (VAT 0% edukacja/medycyna zwolniona, Ryczałt 12%)  
+Wypłaty twórców: Stripe Connect (70/30 split) \+ Wise Business  
+Flow Rejestracji:  
+Wybór roli: "Profesjonalista" (Free Admin) vs "Uczeń/Pacjent" (Paid)  
+Płatni: Plan 29/49/79 PLN → Trial 3 dni (soft entry bez karty)  
+Upgrade: Supermózg Ultra (699) lub Research Premium (799) niezależnie  
+PRZYKŁADY AI ROUTING, podkreślam to przykład, trzeba zaaktualizować totalnie z aktualnych danych na 2026 rok i najbardziej opłacalnych konfiguracji, mam do wykorzystania w końcu (co m.in. posiadam mam i trzeba wdrożyć \+ 300 usd np. Google cloud , https://console.upstash.com/redis?teamid=af2045bc-a447-4c5f-8250-bd153a5bf256 DOJEBANY ZA 220 USD miesięcznie „Prod Pack” do wszystkich 5 czy 10 tysięcy zmiennych \!\!\!\!\!\!\!\!\!\! Claude max 20x 180usd netto \+ place brutto miesięcznie, perplexity max 240 usd brutto miesięcznie    AI Routing: Proste zapytania (fiszki) → DeepSeek V3 (penny cost)  
+Standard → GPT-4o-mini / Claude Haiku  
+Premium/Medyczne → Claude Sonnet 4.5 / Opus 4.5  
+Supermózg ULTRA → Opus 4.5 \+ inne ewentualnie   
+Koszt możliwie niski koszt operacyjny PLN/miesiąc na ucznia przy przychodzie 29-79 PLN ​  
+PODSUMOWANIE KOMPLETNEJ STRUKTURY  
+✅ 5-10K API keys \- architektura needed-ai.com ($10.46) → zaparkowany na later  
+potrzebny.ai → WSZYSTKO TUTAJ (PL ONLY)  
+Web (potrzebny.ai)  
+├─ POLSKI  
+├─ Vercel deployment  
+└─ 100% dopracowany  
+App (potrzebny.ai backend)  
+├─ POLSKI  
+├─ iOS \+ Android  
+└─ App Store \+ Google Play (POLSKI)  
+├─ ZERO English distraction NOW  
+├─ FOCUS 100% na Polski  
+├─ Wszystko idealnie zrobione  
+├─ Kiedy będzie 100% gotowe → POTEM English  
+└─ needed-ai.com zaciążnie zaczyna Q2 2026  
+Masz wykupione:  
+├─ potrzebny.ai      ← MAIN (use this\!)  
+├─ potrzebny.com     ←   
+├─ potrzebny.app     ←   
+├─ potrzebny.dev     ←   
+├─ potrzebny.education ←   
+├─ potrzebny.org     ←   
+├─ potrzebny.store   ← E-commerce vibe (don't use)  
+└─ potrzebny.shop    ← E-commerce vibe (don't use)  
+Oraz needed-ai.com wykupione. Wszystko chce na potrzebny.ai jedna domena App Store i google play oraz web  
+Status: 2 useful, 6 redundant/distracting  
+stawiam przez claude code default full acess jednoczesnie autodeploy web \+ app store i google play na raz \! Za pomocą sterylnie i perfekcyjnie opracowanych promptów które stworzą wszystko idealnie od początku do końca na jednej domenie jak potrzebny.ai wszystko app i web razem czy na dwoch oddzielnie potrzebny.ai do web a potrzebny.app do aplikacjiu, natomiast ja bym to chcial zrobic mozliwie najprosprawniej i najszybciej zeby wszystko bylo w jednym miejscu, uzytkownik loguje sie przez web ma dostep do tego samego konta na aplikacjach czyli no jakby jedna domena jedna aplikacje, uzytkownik loguje sie na domenie i ma aplikacje loguje sie do tego samego konta na web co na aplikacji tylko web na urządzenie laptop komputer, windows/mac, mozliwosc logowania sie takze na urzadzeniach jak roznego typu tablety instalowania wersji aplikacji dostepnej na urzadzenia mobilne w ręke jak smartfon/ dodatkowo tablet i laptop/komputer ale wchodzac w web logujesz sie tylko do jednej.  
