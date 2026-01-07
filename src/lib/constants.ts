@@ -1,54 +1,65 @@
 /**
  * POTRZEBNY.AI - Kompleksowa konfiguracja platformy
- * 19 paneli | 17,734 zmiennych | Marza 80-85%
- * Data: 6 stycznia 2026
+ * 21 paneli | 17,734 zmiennych | Marża 80-85%
+ * Data: 7 stycznia 2026
+ *
+ * STRUKTURA:
+ * - GRUPA 1: Admin (9 paneli, DARMOWE) - w tym 2 PRYWATNE (8, 9)
+ * - GRUPA 2: User (5 paneli, 29/49/79 PLN)
+ * - GRUPA 3: Premium (3 panele, 699/799 PLN)
+ * - GRUPA 4: Special (4 panele) - w tym Telebim TYLKO WEB
  */
 
 export const APP_NAME = 'POTRZEBNY.AI'
 export const APP_DESCRIPTION =
-  'Kompleksowa platforma AI wspierajaca edukacje, terapie i badania naukowe. Stworzona dla Polakow.'
+  'Kompleksowa platforma AI wspierająca edukację, terapię i badania naukowe. Stworzona dla Polaków.'
 export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://potrzebny.ai'
-export const APP_TAGLINE = 'Nikt nie prosil, kazdy potrzebowal.'
+export const APP_TAGLINE = 'Nikt nie prosił, każdy potrzebował.'
 
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
- * ARCHITEKTURA 19 PANELI
+ * ARCHITEKTURA 21 PANELI
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
-// Typy paneli
 export type PanelCategory = 'admin' | 'user' | 'premium' | 'special'
+export type PanelVisibility = 'public' | 'private' | 'web_only' | 'dynamic'
+
 export type PanelId =
-  // GRUPA 1: Panele Administracyjne (DARMOWE)
-  | 'teacher-admin'
-  | 'lecturer-admin'
-  | 'therapist-admin'
-  | 'doctor-trainer-admin'
-  | 'therapist-trainer-admin'
-  | 'personalization-admin'
-  | 'parent-admin'
-  | 'super-admin'
-  | 'comet-assistant-admin'
-  // GRUPA 2: Panele Uzytkownikow (PLATNE 29/49/79 PLN)
-  | 'student'
-  | 'university-student'
-  | 'patient'
-  | 'medical-trainee'
-  | 'training-personalization'
-  // GRUPA 3: Panele Premium (699/799 PLN)
-  | 'supermozg'
-  | 'supermozg-ultra'
-  | 'research-premium'
-  // GRUPA 4: Panele Specjalne
-  | 'therapy-exercises'
-  | 'telebim-led'
+  // GRUPA 1: Panele Administracyjne (DARMOWE) - 9 paneli
+  | 'teacher-admin'           // 1
+  | 'lecturer-admin'          // 2
+  | 'therapist-admin'         // 3
+  | 'doctor-trainer-admin'    // 4
+  | 'therapist-trainer-admin' // 5
+  | 'personalization-admin'   // 6
+  | 'parent-admin'            // 7
+  | 'super-admin'             // 8 - PRYWATNY (tylko ai@potrzebny.ai)
+  | 'comet-assistant-admin'   // 9 - PRYWATNY (tylko asystent@potrzebny.ai)
+  // GRUPA 2: Panele Użytkowników (PŁATNE 29/49/79 PLN) - 5 paneli
+  | 'student'                 // 10
+  | 'university-student'      // 11
+  | 'patient'                 // 12
+  | 'medical-trainee'         // 13
+  | 'training-personalization'// 14
+  // GRUPA 3: Panele Premium (699/799 PLN) - 3 panele
+  | 'supermozg'               // 15
+  | 'supermozg-ultra'         // 16
+  | 'research-premium'        // 17
+  // GRUPA 4: Panele Specjalne - 4 panele
+  | 'psychomedic-b2b'         // 18 - NOWY! B2B dla sieci PsychoMedic
+  | 'therapy-exercises'       // 19
+  | 'telebim-led'             // 20 - TYLKO WEB!
+  | 'dynamic-panel'           // 21 - Dynamiczne panele tworzone przez admina
 
 export interface PanelConfig {
   id: PanelId
+  number: number // Numer panelu 1-21
   name: string
   namePl: string
   description: string
   category: PanelCategory
+  visibility: PanelVisibility
   price: number
   currency: 'PLN'
   icon: string
@@ -56,31 +67,37 @@ export interface PanelConfig {
   features: string[]
   requires2FA: boolean
   requiresPWZ?: boolean
+  requiresHealthApi?: boolean // Dla integracji VALIDIC/Terra
   aiModel: 'deepseek' | 'haiku' | 'sonnet' | 'opus'
   route: string
   accessRoles: UserRole[]
+  allowedEmails?: string[] // Dla prywatnych paneli
+  platformRestriction?: 'web_only' | 'all' // Ograniczenia platformy
 }
 
 /**
  * GRUPA 1: PANELE ADMINISTRACYJNE (DARMOWE - 0 PLN)
+ * Panele 1-9
  */
 export const ADMIN_PANELS: PanelConfig[] = [
   {
     id: 'teacher-admin',
+    number: 1,
     name: 'Teacher Admin',
     namePl: 'Panel Nauczyciela',
     description: 'Mass Upload & Distribution, Classroom Analytics, automatyczne quizy',
     category: 'admin',
+    visibility: 'public',
     price: 0,
     currency: 'PLN',
     icon: '👩‍🏫',
     color: 'bg-green-100 dark:bg-green-900/30',
     features: [
-      'Mass Upload & Distribution (1 plik -> 30 wersji)',
+      'Mass Upload & Distribution (1 plik → 30 wersji)',
       'Classroom Analytics w czasie rzeczywistym',
-      'Automatyczne generowanie quizow/testow',
-      'System zaproszen uczniow (kod/link)',
-      'Feedback AI dla uczniow',
+      'Automatyczne generowanie quizów/testów',
+      'System zaproszeń uczniów (kod/link)',
+      'Feedback AI dla uczniów',
     ],
     requires2FA: false,
     aiModel: 'sonnet',
@@ -89,17 +106,19 @@ export const ADMIN_PANELS: PanelConfig[] = [
   },
   {
     id: 'lecturer-admin',
+    number: 2,
     name: 'Lecturer Admin',
-    namePl: 'Panel Wykladowcy',
-    description: 'Academic Content Hub, transkrypcja wykladow, Semantic Scholar',
+    namePl: 'Panel Wykładowcy',
+    description: 'Academic Content Hub, transkrypcja wykładów, Semantic Scholar',
     category: 'admin',
+    visibility: 'public',
     price: 0,
     currency: 'PLN',
     icon: '🎓',
     color: 'bg-blue-100 dark:bg-blue-900/30',
     features: [
       'Academic Content Hub',
-      'Transkrypcja wykladow (Groq Whisper)',
+      'Transkrypcja wykładów (Groq Whisper)',
       'Integracja Semantic Scholar',
       'Testy akademickie',
       'Stripe Connect 70/30 split',
@@ -111,33 +130,39 @@ export const ADMIN_PANELS: PanelConfig[] = [
   },
   {
     id: 'therapist-admin',
+    number: 3,
     name: 'Therapist Admin',
     namePl: 'Panel Terapeuty',
-    description: 'Szyfrowane notatki, zadania CBT/DBT, monitoring nastroju',
+    description: 'Szyfrowane notatki, zadania CBT/DBT, monitoring nastroju, VALIDIC/Terra wearables',
     category: 'admin',
+    visibility: 'public',
     price: 0,
     currency: 'PLN',
     icon: '🧠',
     color: 'bg-pink-100 dark:bg-pink-900/30',
     features: [
       'Szyfrowane notatki (AES-256-GCM)',
-      'Przydzielanie zadan CBT/DBT',
-      'Monitoring nastroju pacjentow',
+      'Przydzielanie zadań CBT/DBT',
+      'Monitoring nastroju pacjentów',
+      'Integracja VALIDIC/Terra (wearables)',
       'Zgody RODO Art. 9',
       'Alerty kryzysowe',
       'Zero-Knowledge Encryption',
     ],
     requires2FA: true,
+    requiresHealthApi: true,
     aiModel: 'sonnet',
     route: '/panel/therapist',
     accessRoles: ['therapist'],
   },
   {
     id: 'doctor-trainer-admin',
+    number: 4,
     name: 'Doctor Trainer Admin',
-    namePl: 'Panel Lekarza Szkolacego',
-    description: 'Course Builder, certyfikacja CME, Virtual Patient AI',
+    namePl: 'Panel Lekarza Szkolącego',
+    description: 'Course Builder, certyfikacja CME, Virtual Patient AI, Health APIs',
     category: 'admin',
+    visibility: 'public',
     price: 0,
     currency: 'PLN',
     icon: '👨‍⚕️',
@@ -148,20 +173,24 @@ export const ADMIN_PANELS: PanelConfig[] = [
       'Virtual Patient AI',
       'Mentoring feedback',
       'DICOM API do RTG/MRI',
-      'Prowizja 30% od kursow',
+      'Integracja VALIDIC/Terra',
+      'Prowizja 30% od kursów',
     ],
     requires2FA: true,
     requiresPWZ: true,
+    requiresHealthApi: true,
     aiModel: 'opus',
     route: '/panel/doctor-trainer',
     accessRoles: ['doctor'],
   },
   {
     id: 'therapist-trainer-admin',
+    number: 5,
     name: 'Therapist Trainer Admin',
-    namePl: 'Panel Terapeuty Szkolacego',
-    description: 'Superwizja sesji, ewaluacja kompetencji, biblioteka protokolow',
+    namePl: 'Panel Terapeuty Szkolącego',
+    description: 'Superwizja sesji, ewaluacja kompetencji, biblioteka protokołów',
     category: 'admin',
+    visibility: 'public',
     price: 0,
     currency: 'PLN',
     icon: '🧑‍🏫',
@@ -169,8 +198,8 @@ export const ADMIN_PANELS: PanelConfig[] = [
     features: [
       'Superwizja zanonimizowanych sesji',
       'Ewaluacja kompetencji',
-      'Biblioteka protokolow terapeutycznych',
-      'Forum zamkniete',
+      'Biblioteka protokołów terapeutycznych',
+      'Forum zamknięte',
     ],
     requires2FA: true,
     aiModel: 'sonnet',
@@ -179,21 +208,23 @@ export const ADMIN_PANELS: PanelConfig[] = [
   },
   {
     id: 'personalization-admin',
+    number: 6,
     name: 'Personalization Admin',
     namePl: 'Panel Administracyjny Personalizacyjny',
-    description: 'White-label builder, AI transformation tresci, CMS',
+    description: 'White-label builder, AI transformation treści, CMS - tworzenie własnej organizacji',
     category: 'admin',
+    visibility: 'public',
     price: 0,
     currency: 'PLN',
     icon: '🎨',
     color: 'bg-indigo-100 dark:bg-indigo-900/30',
     features: [
       'White-label builder',
-      'AI transformation tresci',
+      'AI transformation treści',
       'CMS z tagowaniem',
       'Dystrybucja pracownikom',
       'Analityka HR',
-      'Tworzenie wlasnej organizacji',
+      'Tworzenie własnej organizacji B2B/B2C',
     ],
     requires2FA: false,
     aiModel: 'sonnet',
@@ -202,10 +233,12 @@ export const ADMIN_PANELS: PanelConfig[] = [
   },
   {
     id: 'parent-admin',
+    number: 7,
     name: 'Parent Admin',
     namePl: 'Panel Rodzica',
     description: 'Dashboard dziecka, kontrola czasu, alerty',
     category: 'admin',
+    visibility: 'public',
     price: 0,
     currency: 'PLN',
     icon: '👨‍👩‍👧',
@@ -213,9 +246,9 @@ export const ADMIN_PANELS: PanelConfig[] = [
     features: [
       'Dashboard dziecka',
       'Kontrola czasu nauki',
-      'Alerty postepow',
-      'Zarzadzanie subskrypcja',
-      'Wglad w materialy',
+      'Alerty postępów',
+      'Zarządzanie subskrypcją',
+      'Wgląd w materiały',
     ],
     requires2FA: false,
     aiModel: 'haiku',
@@ -224,70 +257,84 @@ export const ADMIN_PANELS: PanelConfig[] = [
   },
   {
     id: 'super-admin',
+    number: 8,
     name: 'Super Admin',
     namePl: 'Panel Administratora Platformy',
-    description: 'God Mode - pelna kontrola platformy',
+    description: 'God Mode - pełna kontrola platformy, tworzenie nowych paneli, auto-debugging',
     category: 'admin',
+    visibility: 'private', // PRYWATNY!
     price: 0,
     currency: 'PLN',
     icon: '⚙️',
-    color: 'bg-slate-100 dark:bg-slate-700/50',
+    color: 'bg-slate-900 dark:bg-slate-800',
     features: [
-      'God Mode - pelny dostep',
+      'God Mode - pełny dostęp do wszystkiego',
       'MRR/Churn analytics',
       'User management',
-      'Zarzadzanie 5-10k API keys',
+      'Zarządzanie 5-10k API keys',
       'Stripe/inFakt dashboard',
       'Sentry/Upstash logs',
-      'Tworzenie nowych paneli',
+      'TWORZENIE NOWYCH PANELI',
+      'USUWANIE/EDYCJA PANELI',
+      'AUTO-DEBUGGING platformy',
+      'Dostęp do wszystkich 21 paneli',
     ],
     requires2FA: true,
     aiModel: 'opus',
     route: '/panel/admin',
     accessRoles: ['superadmin'],
+    allowedEmails: ['ai@potrzebny.ai'], // TYLKO ten email!
   },
   {
     id: 'comet-assistant-admin',
+    number: 9,
     name: 'Comet Assistant Admin',
     namePl: 'Panel Perplexity Max Comet Assistant',
-    description: 'Integracja z Perplexity Max agent - wolny wybieg z zatwierdzaniem',
+    description: 'Integracja z Perplexity Max agent - wolny wybieg z zatwierdzaniem przez admina',
     category: 'admin',
+    visibility: 'private', // PRYWATNY!
     price: 0,
     currency: 'PLN',
     icon: '🤖',
-    color: 'bg-cyan-100 dark:bg-cyan-900/30',
+    color: 'bg-cyan-900 dark:bg-cyan-800',
     features: [
       'Integracja Perplexity Max Agent',
       'Wolny wybieg dla agenta',
-      'Zatwierdzanie zmian recznie',
+      'WSZYSTKIE ZMIANY WYMAGAJĄ ZATWIERDZENIA',
+      'Zatwierdzanie z panelu #8 (Super Admin)',
       'Budowanie nowych paneli',
       'Debugging i naprawy',
-      'Pelen autopilot z kontrola',
+      'Pełen autopilot z kontrolą',
+      'Integracja Claude Code',
     ],
     requires2FA: true,
     aiModel: 'opus',
     route: '/panel/comet-assistant',
     accessRoles: ['superadmin'],
+    allowedEmails: ['asystent@potrzebny.ai'], // TYLKO ten email!
   },
 ]
 
 /**
- * GRUPA 2: PANELE UZYTKOWNIKOW KONCOWYCH (PLATNE)
+ * GRUPA 2: PANELE UŻYTKOWNIKÓW KOŃCOWYCH (PŁATNE)
+ * Panele 10-14
  */
 export const USER_PANELS: PanelConfig[] = [
   {
     id: 'student',
+    number: 10,
     name: 'Student Panel',
     namePl: 'Panel Ucznia',
     description: 'AI Personalizacja, Note Generator, Flashcards, AI Tutor, Gamifikacja',
     category: 'user',
-    price: 29, // Basic, moze byc 49 Pro lub 79 Ultra
+    visibility: 'public',
+    price: 29,
     currency: 'PLN',
     icon: '📚',
     color: 'bg-blue-100 dark:bg-blue-900/30',
     features: [
-      'AI Personalizacja (Wzrokowiec/Sluchowiec/ADHD/Dysleksja/ASD)',
-      'Note Generator (1 klikniecie)',
+      'AI Personalizacja (Wzrokowiec/Słuchowiec/ADHD/Dysleksja/ASD)',
+      'Note Generator (1 kliknięcie)',
       'Flashcards & Quiz automatyczne',
       'AI Tutor (DeepSeek/Claude)',
       'Gamifikacja (XP, ligi, streaks)',
@@ -300,16 +347,18 @@ export const USER_PANELS: PanelConfig[] = [
   },
   {
     id: 'university-student',
+    number: 11,
     name: 'University Student Panel',
     namePl: 'Panel Studenta Akademickiego',
-    description: 'Transkrypcja wykladow, Academic Summarizer, Citation Helper',
+    description: 'Transkrypcja wykładów, Academic Summarizer, Citation Helper',
     category: 'user',
+    visibility: 'public',
     price: 29,
     currency: 'PLN',
     icon: '🎓',
     color: 'bg-indigo-100 dark:bg-indigo-900/30',
     features: [
-      'Transkrypcja wykladow',
+      'Transkrypcja wykładów',
       'Academic Summarizer',
       'Citation Helper (APA/Vancouver)',
       'Exam Prep',
@@ -323,33 +372,39 @@ export const USER_PANELS: PanelConfig[] = [
   },
   {
     id: 'patient',
+    number: 12,
     name: 'Patient Panel',
     namePl: 'Panel Pacjenta',
-    description: 'Homework od terapeuty, Mood Tracker, Secure Journal, SOS',
+    description: 'Homework od terapeuty, Mood Tracker, Secure Journal, SOS, Health wearables',
     category: 'user',
+    visibility: 'public',
     price: 29,
     currency: 'PLN',
     icon: '💚',
     color: 'bg-green-100 dark:bg-green-900/30',
     features: [
       'Homework od terapeuty',
-      'Mood Tracker (wykresy trendow)',
+      'Mood Tracker (wykresy trendów)',
       'Secure Journal (szyfrowany)',
       'Psychoedukacja',
       'SOS (Panic Button - 116 123)',
+      'Integracja VALIDIC/Terra (wearables)',
       'RODO Art. 9, AES-256',
     ],
     requires2FA: true,
+    requiresHealthApi: true,
     aiModel: 'sonnet',
     route: '/panel/patient',
     accessRoles: ['patient'],
   },
   {
     id: 'medical-trainee',
+    number: 13,
     name: 'Medical Trainee Panel',
     namePl: 'Panel Studenta Medycznego/Kursanta',
     description: 'Case Studies, Virtual Patient AI, Exam Simulator',
     category: 'user',
+    visibility: 'public',
     price: 29,
     currency: 'PLN',
     icon: '🩺',
@@ -360,7 +415,7 @@ export const USER_PANELS: PanelConfig[] = [
       'Exam Simulator',
       'Procedure Checklists',
       'Mentoring Feedback',
-      'Pelna personalizacja tresci',
+      'Pełna personalizacja treści',
     ],
     requires2FA: false,
     aiModel: 'sonnet',
@@ -369,10 +424,12 @@ export const USER_PANELS: PanelConfig[] = [
   },
   {
     id: 'training-personalization',
+    number: 14,
     name: 'Training Personalization Panel',
     namePl: 'Panel Szkoleniowy Personalizacyjny',
     description: 'Adaptive Learning, Micro-learning, Certyfikaty',
     category: 'user',
+    visibility: 'public',
     price: 29,
     currency: 'PLN',
     icon: '🎯',
@@ -382,8 +439,8 @@ export const USER_PANELS: PanelConfig[] = [
       'Micro-learning',
       'Certyfikaty automatyczne',
       'Knowledge Retrieval chatbot',
-      'Dolaczanie do organizacji',
-      'Pelna personalizacja tresci',
+      'Dołączanie do organizacji',
+      'Pełna personalizacja treści',
     ],
     requires2FA: false,
     aiModel: 'haiku',
@@ -393,16 +450,19 @@ export const USER_PANELS: PanelConfig[] = [
 ]
 
 /**
- * GRUPA 3: PANELE SPECJALNE & PREMIUM
+ * GRUPA 3: PANELE PREMIUM
+ * Panele 15-17
  */
 export const PREMIUM_PANELS: PanelConfig[] = [
   {
     id: 'supermozg',
+    number: 15,
     name: 'Supermozg Panel',
-    namePl: 'Panel Supermozg',
-    description: 'Bonus dla Ultra 79 PLN - Cognitive Training, Neuro-Education',
+    namePl: 'Panel Supermózg',
+    description: 'Bonus dla Ultra 79 PLN - Cognitive Training, Neuro-Education, Health wearables',
     category: 'premium',
-    price: 79, // Dostepny automatycznie dla Ultra
+    visibility: 'public',
+    price: 79,
     currency: 'PLN',
     icon: '🧠',
     color: 'bg-violet-100 dark:bg-violet-900/30',
@@ -413,18 +473,22 @@ export const PREMIUM_PANELS: PanelConfig[] = [
       'Focus Tools',
       'Supplement Guide (basic)',
       'Sleep Optimization',
+      'Integracja VALIDIC/Terra (wearables)',
     ],
     requires2FA: false,
+    requiresHealthApi: true,
     aiModel: 'sonnet',
     route: '/panel/supermozg',
     accessRoles: ['ultra'],
   },
   {
     id: 'supermozg-ultra',
+    number: 16,
     name: 'Supermozg ULTRA Panel',
-    namePl: 'Panel Supermozg ULTRA',
-    description: 'Najlepszy panel tego typu na swiecie - Claude Opus 4.5, 4000+ APIs',
+    namePl: 'Panel Supermózg ULTRA',
+    description: 'Najlepszy panel tego typu na świecie - Claude Opus 4.5, 4000+ APIs, VALIDIC/Terra',
     category: 'premium',
+    visibility: 'public',
     price: 699,
     currency: 'PLN',
     icon: '🚀',
@@ -432,24 +496,27 @@ export const PREMIUM_PANELS: PanelConfig[] = [
     features: [
       'Claude Opus 4.5 (Extended Thinking)',
       '200K+ context window',
-      'AI Stack Builder (300+ nootropikow)',
+      'AI Stack Builder (300+ nootropików)',
       'Farmakogenomika Edukacyjna (23andMe)',
       'Neuro-Optymalizacja',
-      'Wearable Integration (Oura/Whoop)',
+      'VALIDIC/Terra Integration (Oura/Whoop)',
       'Advanced Longevity Protocols',
       'DrugBank Interaction Checker',
     ],
     requires2FA: false,
+    requiresHealthApi: true,
     aiModel: 'opus',
     route: '/panel/supermozg-ultra',
     accessRoles: ['supermozg-ultra'],
   },
   {
     id: 'research-premium',
+    number: 17,
     name: 'Research Premium Panel',
     namePl: 'Panel Badawczy Premium',
-    description: 'Dla lekarzy specjalistow - PubMed, OncoKB, Precision Medicine',
+    description: 'Dla lekarzy specjalistów - PubMed, OncoKB, Precision Medicine, VALIDIC/Terra',
     category: 'premium',
+    visibility: 'public',
     price: 799,
     currency: 'PLN',
     icon: '🔬',
@@ -461,11 +528,13 @@ export const PREMIUM_PANELS: PanelConfig[] = [
       'Precision Medicine & Genomics',
       'Advanced Drug Interaction Checker Pro',
       'EHR Integration Ready (FHIR R4)',
+      'VALIDIC/Terra Integration (wearables)',
       'PubMed, OncoKB, PharmGKB, Wiley TDM',
       '5000+ Medical APIs',
     ],
     requires2FA: true,
     requiresPWZ: true,
+    requiresHealthApi: true,
     aiModel: 'opus',
     route: '/panel/research',
     accessRoles: ['doctor', 'researcher'],
@@ -474,24 +543,55 @@ export const PREMIUM_PANELS: PanelConfig[] = [
 
 /**
  * GRUPA 4: PANELE SPECJALNE
+ * Panele 18-21
  */
 export const SPECIAL_PANELS: PanelConfig[] = [
   {
-    id: 'therapy-exercises',
-    name: 'Therapy Exercises Panel',
-    namePl: 'Panel Cwiczen Terapeutycznych',
-    description: 'Baza 5000+ cwiczen terapeutycznych AI',
+    id: 'psychomedic-b2b',
+    number: 18,
+    name: 'PsychoMedic B2B Panel',
+    namePl: 'Panel PsychoMedic',
+    description: 'Specjalny panel B2B dla całej sieci PsychoMedic - Dr Barlik',
     category: 'special',
+    visibility: 'public',
+    price: 0, // B2B custom pricing
+    currency: 'PLN',
+    icon: '🏥',
+    color: 'bg-gradient-to-r from-emerald-500 to-teal-500',
+    features: [
+      'Dedykowany panel dla sieci PsychoMedic',
+      'Integracja z systemami kliniki',
+      'Multi-lokalizacja (wszystkie placówki)',
+      'Zarządzanie terapeutami i lekarzami',
+      'Custom branding',
+      'VALIDIC/Terra Integration (wearables)',
+      'Raporty dla zarządu',
+      'SLA Enterprise',
+    ],
+    requires2FA: true,
+    requiresHealthApi: true,
+    aiModel: 'opus',
+    route: '/panel/psychomedic',
+    accessRoles: ['organization', 'doctor', 'therapist'],
+  },
+  {
+    id: 'therapy-exercises',
+    number: 19,
+    name: 'Therapy Exercises Panel',
+    namePl: 'Panel Ćwiczeń Terapeutycznych',
+    description: 'Baza 5000+ ćwiczeń terapeutycznych AI',
+    category: 'special',
+    visibility: 'public',
     price: 29,
     currency: 'PLN',
     icon: '🧘',
     color: 'bg-teal-100 dark:bg-teal-900/30',
     features: [
-      'Baza 5000+ cwiczen',
-      'Przesylanie do pacjentow',
+      'Baza 5000+ ćwiczeń',
+      'Przesyłanie do pacjentów',
       'Monitoring wykonania',
-      'Feedback i trudnosci',
-      'Personalizacja cwiczen',
+      'Feedback i trudności',
+      'Personalizacja ćwiczeń',
     ],
     requires2FA: false,
     aiModel: 'haiku',
@@ -500,11 +600,13 @@ export const SPECIAL_PANELS: PanelConfig[] = [
   },
   {
     id: 'telebim-led',
+    number: 20,
     name: 'Telebim LED Panel',
     namePl: 'Panel Telebim LED',
-    description: 'Reklama na ekranie LED - tylko WEB, bez App Store/Google Play',
+    description: 'Reklama na ekranie LED - TYLKO WEB! Nie dostępny w App Store/Google Play',
     category: 'special',
-    price: 499, // Grafika Standard, moze byc 1299/1699/3999
+    visibility: 'web_only', // TYLKO WEB!
+    price: 499,
     currency: 'PLN',
     icon: '📺',
     color: 'bg-yellow-100 dark:bg-yellow-900/30',
@@ -515,15 +617,42 @@ export const SPECIAL_PANELS: PanelConfig[] = [
       'Enterprise Multi 3999 PLN/mc',
       'AI generowanie grafik (DALL-E 3)',
       'Automatyzacja AMUSO ECMS',
+      'BLIK, Karty, Apple Pay, Google Pay, Klarna',
     ],
     requires2FA: false,
     aiModel: 'haiku',
     route: '/dashboard/telebim',
     accessRoles: ['advertiser'],
+    platformRestriction: 'web_only',
+  },
+  {
+    id: 'dynamic-panel',
+    number: 21,
+    name: 'Dynamic Panel',
+    namePl: 'Panel Dynamiczny',
+    description: 'Panele tworzone dynamicznie przez administratora z panelu #8',
+    category: 'special',
+    visibility: 'dynamic',
+    price: 0,
+    currency: 'PLN',
+    icon: '✨',
+    color: 'bg-gradient-to-r from-pink-500 to-violet-500',
+    features: [
+      'Tworzenie przez Super Admin (panel #8)',
+      'Pełna personalizacja',
+      'Custom pricing',
+      'Custom features',
+      'Custom access roles',
+      'Automatyczny deploy Web + App',
+    ],
+    requires2FA: false,
+    aiModel: 'sonnet',
+    route: '/panel/dynamic',
+    accessRoles: ['superadmin'],
   },
 ]
 
-// Wszystkie panele
+// Wszystkie panele (21)
 export const ALL_PANELS: PanelConfig[] = [
   ...ADMIN_PANELS,
   ...USER_PANELS,
@@ -531,9 +660,21 @@ export const ALL_PANELS: PanelConfig[] = [
   ...SPECIAL_PANELS,
 ]
 
+// Panele publiczne (widoczne dla użytkowników)
+export const PUBLIC_PANELS = ALL_PANELS.filter(p => p.visibility === 'public')
+
+// Panele prywatne (tylko dla określonych emaili)
+export const PRIVATE_PANELS = ALL_PANELS.filter(p => p.visibility === 'private')
+
+// Panele tylko web (nie dostępne w App Store/Google Play)
+export const WEB_ONLY_PANELS = ALL_PANELS.filter(p => p.visibility === 'web_only')
+
+// Panele z Health API (VALIDIC/Terra)
+export const HEALTH_API_PANELS = ALL_PANELS.filter(p => p.requiresHealthApi)
+
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
- * ROLE UZYTKOWNIKOW
+ * ROLE UŻYTKOWNIKÓW
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
@@ -571,6 +712,17 @@ export type UserRole = (typeof USER_ROLES)[keyof typeof USER_ROLES]
 
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
+ * AUTORYZOWANE EMAILE DLA PRYWATNYCH PANELI
+ * ═══════════════════════════════════════════════════════════════════════════════
+ */
+
+export const AUTHORIZED_EMAILS = {
+  superAdmin: 'ai@potrzebny.ai',
+  cometAssistant: 'asystent@potrzebny.ai',
+} as const
+
+/**
+ * ═══════════════════════════════════════════════════════════════════════════════
  * PLANY SUBSKRYPCYJNE
  * ═══════════════════════════════════════════════════════════════════════════════
  */
@@ -579,7 +731,7 @@ export const SUBSCRIPTION_PLANS = {
   // Darmowe (Admin)
   FREE_ADMIN: 'free_admin',
 
-  // Platne (User)
+  // Płatne (User)
   BASIC: 'basic',
   PRO: 'pro',
   ULTRA: 'ultra',
@@ -589,6 +741,7 @@ export const SUBSCRIPTION_PLANS = {
   RESEARCH_PREMIUM: 'research_premium',
 
   // Specjalne
+  PSYCHOMEDIC_B2B: 'psychomedic_b2b',
   THERAPY_EXERCISES: 'therapy_exercises',
   TELEBIM_GRAFIKA: 'telebim_grafika',
   TELEBIM_VIDEO: 'telebim_video',
@@ -599,7 +752,7 @@ export const SUBSCRIPTION_PLANS = {
 export type SubscriptionPlan = (typeof SUBSCRIPTION_PLANS)[keyof typeof SUBSCRIPTION_PLANS]
 
 /**
- * Cennik planow
+ * Cennik planów
  */
 export const PLAN_PRICING = {
   [SUBSCRIPTION_PLANS.FREE_ADMIN]: { price: 0, currency: 'PLN', period: 'lifetime' },
@@ -608,6 +761,7 @@ export const PLAN_PRICING = {
   [SUBSCRIPTION_PLANS.ULTRA]: { price: 79, currency: 'PLN', period: 'monthly' },
   [SUBSCRIPTION_PLANS.SUPERMOZG_ULTRA]: { price: 699, currency: 'PLN', period: 'monthly' },
   [SUBSCRIPTION_PLANS.RESEARCH_PREMIUM]: { price: 799, currency: 'PLN', period: 'monthly' },
+  [SUBSCRIPTION_PLANS.PSYCHOMEDIC_B2B]: { price: 0, currency: 'PLN', period: 'custom' },
   [SUBSCRIPTION_PLANS.THERAPY_EXERCISES]: { price: 29, currency: 'PLN', period: 'monthly' },
   [SUBSCRIPTION_PLANS.TELEBIM_GRAFIKA]: { price: 499, currency: 'PLN', period: 'monthly' },
   [SUBSCRIPTION_PLANS.TELEBIM_VIDEO]: { price: 1299, currency: 'PLN', period: 'monthly' },
@@ -616,12 +770,12 @@ export const PLAN_PRICING = {
 } as const
 
 /**
- * Limity planow
+ * Limity planów
  */
 export const PLAN_LIMITS = {
   [SUBSCRIPTION_PLANS.FREE_ADMIN]: {
-    aiRequests: -1, // Unlimited for admins
-    storage: 10000, // 10 GB
+    aiRequests: -1,
+    storage: 10000,
     students: -1,
   },
   [SUBSCRIPTION_PLANS.BASIC]: {
@@ -688,6 +842,15 @@ export const API_ROUTES = {
     therapist: '/api/panels/therapist',
     research: '/api/panels/research',
     supermozg: '/api/panels/supermozg',
+    psychomedic: '/api/panels/psychomedic',
+    dynamic: '/api/panels/dynamic',
+  },
+  admin: {
+    createPanel: '/api/admin/create-panel',
+    deletePanel: '/api/admin/delete-panel',
+    editPanel: '/api/admin/edit-panel',
+    approveChanges: '/api/admin/approve-changes',
+    debugPlatform: '/api/admin/debug',
   },
   telebim: {
     create: '/api/telebim/create',
@@ -699,6 +862,8 @@ export const API_ROUTES = {
     validic: '/api/health/validic',
     terra: '/api/health/terra',
     sync: '/api/health/sync',
+    oura: '/api/health/oura',
+    whoop: '/api/health/whoop',
   },
 } as const
 
@@ -716,7 +881,7 @@ export const ROUTES = {
   settings: '/settings',
   pricing: '/pricing',
   panels: {
-    // Admin
+    // Admin (1-9)
     teacher: '/panel/teacher',
     lecturer: '/panel/lecturer',
     therapist: '/panel/therapist',
@@ -724,21 +889,23 @@ export const ROUTES = {
     therapistTrainer: '/panel/therapist-trainer',
     personalization: '/panel/personalization',
     parent: '/panel/parent',
-    admin: '/panel/admin',
-    cometAssistant: '/panel/comet-assistant',
-    // User
+    admin: '/panel/admin', // PRYWATNY
+    cometAssistant: '/panel/comet-assistant', // PRYWATNY
+    // User (10-14)
     student: '/panel/student',
     universityStudent: '/panel/university-student',
     patient: '/panel/patient',
     medicalTrainee: '/panel/medical-trainee',
     training: '/panel/training',
-    // Premium
+    // Premium (15-17)
     supermozg: '/panel/supermozg',
     supermozgUltra: '/panel/supermozg-ultra',
     research: '/panel/research',
-    // Special
+    // Special (18-21)
+    psychomedic: '/panel/psychomedic',
     therapyExercises: '/panel/therapy-exercises',
-    telebim: '/dashboard/telebim',
+    telebim: '/dashboard/telebim', // TYLKO WEB
+    dynamic: '/panel/dynamic',
   },
 } as const
 
@@ -750,7 +917,7 @@ export const ROUTES = {
 
 export const LANGUAGES = {
   pl: 'Polski',
-} as const // Tylko polski na start
+} as const
 
 export type Language = keyof typeof LANGUAGES
 
@@ -768,17 +935,18 @@ export const TRIAL_CONFIG = {
 
 export const BUSINESS_INFO = {
   name: 'POTRZEBNY AI',
-  owner: 'Bartlomiej Potrzebowski',
+  owner: 'Bartłomiej Potrzebowski',
   nip: '1133182851',
   email: 'ai@potrzebny.ai',
+  assistantEmail: 'asystent@potrzebny.ai',
   dpoEmail: 'dpo@potrzebny.ai',
   supportEmail: 'support@potrzebny.ai',
   vatStatus: 'VAT 0% (edukacja/medycyna)',
-  taxForm: 'Ryczalt 12%',
+  taxForm: 'Ryczałt 12%',
 } as const
 
 /**
- * Stale SOS dla panelu pacjenta
+ * Stałe SOS dla panelu pacjenta
  */
 export const SOS_CONTACTS = {
   crisis: {
@@ -790,5 +958,47 @@ export const SOS_CONTACTS = {
     number: '112',
     name: 'Numer alarmowy',
     available: '24/7',
+  },
+} as const
+
+/**
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * HEALTH API CONFIGURATION
+ * ═══════════════════════════════════════════════════════════════════════════════
+ */
+
+export const HEALTH_API_CONFIG = {
+  validic: {
+    enabled: true,
+    sandboxExpiry: '2026-01-29', // PILNE!
+    migrateToTerra: true,
+  },
+  terra: {
+    enabled: true,
+    pricePerUser: 0.50, // USD/mc
+    devices: ['oura', 'whoop', 'apple_watch', 'fitbit', 'garmin'],
+  },
+  native: {
+    appleHealthKit: true,
+    googleFit: true,
+  },
+} as const
+
+/**
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * AUTO-DEBUGGING CONFIG
+ * ═══════════════════════════════════════════════════════════════════════════════
+ */
+
+export const AUTO_DEBUG_CONFIG = {
+  enabled: true,
+  selfHealing: true,
+  alertThreshold: 3, // Błędów przed alertem
+  autoFixEnabled: true,
+  notifyEmail: 'ai@potrzebny.ai',
+  integrations: {
+    sentry: false, // Używamy Upstash zamiast
+    upstash: true,
+    posthog: true,
   },
 } as const
